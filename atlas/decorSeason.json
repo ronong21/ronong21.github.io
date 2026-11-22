@@ -1,0 +1,197 @@
+{
+  "srcPerPx": 4.67,
+  "rects": {
+    "cherryTree": {
+      "x": 0,
+      "y": 0,
+      "w": 65,
+      "h": 60,
+      "tilesW": 4.06,
+      "tilesH": 3.75
+    },
+    "cherrySapling": {
+      "x": 66,
+      "y": 24,
+      "w": 29,
+      "h": 36,
+      "tilesW": 1.81,
+      "tilesH": 2.25
+    },
+    "tulipBed": {
+      "x": 96,
+      "y": 48,
+      "w": 27,
+      "h": 12,
+      "tilesW": 1.69,
+      "tilesH": 0.75
+    },
+    "bunting": {
+      "x": 124,
+      "y": 32,
+      "w": 48,
+      "h": 28,
+      "tilesW": 3,
+      "tilesH": 1.75
+    },
+    "planter": {
+      "x": 173,
+      "y": 46,
+      "w": 22,
+      "h": 14,
+      "tilesW": 1.38,
+      "tilesH": 0.88
+    },
+    "flowerArch": {
+      "x": 196,
+      "y": 16,
+      "w": 51,
+      "h": 44,
+      "tilesW": 3.19,
+      "tilesH": 2.75
+    },
+    "summerTree": {
+      "x": 248,
+      "y": 0,
+      "w": 66,
+      "h": 60,
+      "tilesW": 4.13,
+      "tilesH": 3.75
+    },
+    "sunflowers": {
+      "x": 315,
+      "y": 28,
+      "w": 30,
+      "h": 32,
+      "tilesW": 1.88,
+      "tilesH": 2
+    },
+    "lanternString": {
+      "x": 346,
+      "y": 28,
+      "w": 56,
+      "h": 32,
+      "tilesW": 3.5,
+      "tilesH": 2
+    },
+    "festivalStall": {
+      "x": 403,
+      "y": 20,
+      "w": 47,
+      "h": 40,
+      "tilesW": 2.94,
+      "tilesH": 2.5
+    },
+    "watermelons": {
+      "x": 451,
+      "y": 48,
+      "w": 24,
+      "h": 12,
+      "tilesW": 1.5,
+      "tilesH": 0.75
+    },
+    "windChime": {
+      "x": 476,
+      "y": 28,
+      "w": 20,
+      "h": 32,
+      "tilesW": 1.25,
+      "tilesH": 2
+    },
+    "mapleTree": {
+      "x": 497,
+      "y": 0,
+      "w": 70,
+      "h": 60,
+      "tilesW": 4.38,
+      "tilesH": 3.75
+    },
+    "ginkgoTree": {
+      "x": 568,
+      "y": 20,
+      "w": 36,
+      "h": 40,
+      "tilesW": 2.25,
+      "tilesH": 2.5
+    },
+    "leafPile": {
+      "x": 605,
+      "y": 52,
+      "w": 23,
+      "h": 8,
+      "tilesW": 1.44,
+      "tilesH": 0.5
+    },
+    "pumpkins": {
+      "x": 629,
+      "y": 46,
+      "w": 33,
+      "h": 14,
+      "tilesW": 2.06,
+      "tilesH": 0.88
+    },
+    "scarecrow": {
+      "x": 663,
+      "y": 24,
+      "w": 32,
+      "h": 36,
+      "tilesW": 2,
+      "tilesH": 2.25
+    },
+    "hayBales": {
+      "x": 696,
+      "y": 40,
+      "w": 35,
+      "h": 20,
+      "tilesW": 2.19,
+      "tilesH": 1.25
+    },
+    "snowPine": {
+      "x": 732,
+      "y": 0,
+      "w": 50,
+      "h": 60,
+      "tilesW": 3.13,
+      "tilesH": 3.75
+    },
+    "snowTree": {
+      "x": 783,
+      "y": 4,
+      "w": 53,
+      "h": 56,
+      "tilesW": 3.31,
+      "tilesH": 3.5
+    },
+    "snowman": {
+      "x": 837,
+      "y": 32,
+      "w": 25,
+      "h": 28,
+      "tilesW": 1.56,
+      "tilesH": 1.75
+    },
+    "festiveFir": {
+      "x": 863,
+      "y": 8,
+      "w": 40,
+      "h": 52,
+      "tilesW": 2.5,
+      "tilesH": 3.25
+    },
+    "snowDrift": {
+      "x": 904,
+      "y": 52,
+      "w": 27,
+      "h": 8,
+      "tilesW": 1.69,
+      "tilesH": 0.5
+    },
+    "sled": {
+      "x": 932,
+      "y": 48,
+      "w": 29,
+      "h": 12,
+      "tilesW": 1.81,
+      "tilesH": 0.75
+    }
+  }
+}

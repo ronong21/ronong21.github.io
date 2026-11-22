@@ -1,0 +1,261 @@
+{
+  "srcPerPx": 11,
+  "rects": {
+    "swordWood": {
+      "x": 0,
+      "y": 3,
+      "w": 13,
+      "h": 14,
+      "tilesW": 0.81,
+      "tilesH": 0.88
+    },
+    "swordIron": {
+      "x": 14,
+      "y": 3,
+      "w": 13,
+      "h": 14,
+      "tilesW": 0.81,
+      "tilesH": 0.88
+    },
+    "swordSilver": {
+      "x": 28,
+      "y": 2,
+      "w": 13,
+      "h": 15,
+      "tilesW": 0.81,
+      "tilesH": 0.94
+    },
+    "bowShort": {
+      "x": 42,
+      "y": 2,
+      "w": 12,
+      "h": 15,
+      "tilesW": 0.75,
+      "tilesH": 0.94
+    },
+    "bowIron": {
+      "x": 55,
+      "y": 2,
+      "w": 13,
+      "h": 15,
+      "tilesW": 0.81,
+      "tilesH": 0.94
+    },
+    "bowGreat": {
+      "x": 69,
+      "y": 1,
+      "w": 12,
+      "h": 16,
+      "tilesW": 0.75,
+      "tilesH": 1
+    },
+    "staffOak": {
+      "x": 82,
+      "y": 2,
+      "w": 10,
+      "h": 15,
+      "tilesW": 0.63,
+      "tilesH": 0.94
+    },
+    "staffAmber": {
+      "x": 93,
+      "y": 1,
+      "w": 12,
+      "h": 16,
+      "tilesW": 0.75,
+      "tilesH": 1
+    },
+    "staffStar": {
+      "x": 106,
+      "y": 2,
+      "w": 12,
+      "h": 15,
+      "tilesW": 0.75,
+      "tilesH": 0.94
+    },
+    "capLeather": {
+      "x": 119,
+      "y": 5,
+      "w": 15,
+      "h": 12,
+      "tilesW": 0.94,
+      "tilesH": 0.75
+    },
+    "helmIron": {
+      "x": 135,
+      "y": 4,
+      "w": 12,
+      "h": 13,
+      "tilesW": 0.75,
+      "tilesH": 0.81
+    },
+    "hatHunter": {
+      "x": 148,
+      "y": 4,
+      "w": 15,
+      "h": 13,
+      "tilesW": 0.94,
+      "tilesH": 0.81
+    },
+    "tunicCloth": {
+      "x": 164,
+      "y": 3,
+      "w": 15,
+      "h": 14,
+      "tilesW": 0.94,
+      "tilesH": 0.88
+    },
+    "armorLeather": {
+      "x": 180,
+      "y": 3,
+      "w": 15,
+      "h": 14,
+      "tilesW": 0.94,
+      "tilesH": 0.88
+    },
+    "chainMail": {
+      "x": 196,
+      "y": 3,
+      "w": 15,
+      "h": 14,
+      "tilesW": 0.94,
+      "tilesH": 0.88
+    },
+    "shieldRound": {
+      "x": 212,
+      "y": 2,
+      "w": 15,
+      "h": 15,
+      "tilesW": 0.94,
+      "tilesH": 0.94
+    },
+    "giftFlameSword": {
+      "x": 228,
+      "y": 1,
+      "w": 14,
+      "h": 16,
+      "tilesW": 0.88,
+      "tilesH": 1
+    },
+    "giftLanternBow": {
+      "x": 243,
+      "y": 2,
+      "w": 16,
+      "h": 15,
+      "tilesW": 1,
+      "tilesH": 0.94
+    },
+    "giftMoonStaff": {
+      "x": 260,
+      "y": 1,
+      "w": 13,
+      "h": 16,
+      "tilesW": 0.81,
+      "tilesH": 1
+    },
+    "giftScarf": {
+      "x": 274,
+      "y": 2,
+      "w": 14,
+      "h": 15,
+      "tilesW": 0.88,
+      "tilesH": 0.94
+    },
+    "potion": {
+      "x": 289,
+      "y": 3,
+      "w": 12,
+      "h": 14,
+      "tilesW": 0.75,
+      "tilesH": 0.88
+    },
+    "torch": {
+      "x": 302,
+      "y": 0,
+      "w": 11,
+      "h": 17,
+      "tilesW": 0.69,
+      "tilesH": 1.06
+    },
+    "lunchBox": {
+      "x": 314,
+      "y": 4,
+      "w": 15,
+      "h": 13,
+      "tilesW": 0.94,
+      "tilesH": 0.81
+    },
+    "rope": {
+      "x": 330,
+      "y": 3,
+      "w": 15,
+      "h": 14,
+      "tilesW": 0.94,
+      "tilesH": 0.88
+    },
+    "furMole": {
+      "x": 346,
+      "y": 3,
+      "w": 14,
+      "h": 14,
+      "tilesW": 0.88,
+      "tilesH": 0.88
+    },
+    "tailFox": {
+      "x": 361,
+      "y": 3,
+      "w": 14,
+      "h": 14,
+      "tilesW": 0.88,
+      "tilesH": 0.88
+    },
+    "oreCopper": {
+      "x": 376,
+      "y": 4,
+      "w": 15,
+      "h": 13,
+      "tilesW": 0.94,
+      "tilesH": 0.81
+    },
+    "crystalBlue": {
+      "x": 392,
+      "y": 3,
+      "w": 12,
+      "h": 14,
+      "tilesW": 0.75,
+      "tilesH": 0.88
+    },
+    "mushroomGlow": {
+      "x": 405,
+      "y": 3,
+      "w": 13,
+      "h": 14,
+      "tilesW": 0.81,
+      "tilesH": 0.88
+    },
+    "scroll": {
+      "x": 419,
+      "y": 3,
+      "w": 14,
+      "h": 14,
+      "tilesW": 0.88,
+      "tilesH": 0.88
+    },
+    "medalRank": {
+      "x": 434,
+      "y": 2,
+      "w": 13,
+      "h": 15,
+      "tilesW": 0.81,
+      "tilesH": 0.94
+    },
+    "badgeHeart": {
+      "x": 448,
+      "y": 5,
+      "w": 14,
+      "h": 12,
+      "tilesW": 0.88,
+      "tilesH": 0.75
+    }
+  }
+}

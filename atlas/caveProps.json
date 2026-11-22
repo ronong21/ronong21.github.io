@@ -1,0 +1,261 @@
+{
+  "srcPerPx": 6.75,
+  "rects": {
+    "chestClosed": {
+      "x": 0,
+      "y": 16,
+      "w": 22,
+      "h": 17,
+      "tilesW": 1.38,
+      "tilesH": 1.06
+    },
+    "chestOpen": {
+      "x": 23,
+      "y": 11,
+      "w": 24,
+      "h": 22,
+      "tilesW": 1.5,
+      "tilesH": 1.38
+    },
+    "campfire": {
+      "x": 48,
+      "y": 13,
+      "w": 17,
+      "h": 20,
+      "tilesW": 1.06,
+      "tilesH": 1.25
+    },
+    "tent": {
+      "x": 66,
+      "y": 5,
+      "w": 37,
+      "h": 28,
+      "tilesW": 2.31,
+      "tilesH": 1.75
+    },
+    "bedroll": {
+      "x": 104,
+      "y": 22,
+      "w": 25,
+      "h": 11,
+      "tilesW": 1.56,
+      "tilesH": 0.69
+    },
+    "cartEmpty": {
+      "x": 130,
+      "y": 17,
+      "w": 22,
+      "h": 16,
+      "tilesW": 1.38,
+      "tilesH": 1
+    },
+    "cartOre": {
+      "x": 153,
+      "y": 11,
+      "w": 24,
+      "h": 22,
+      "tilesW": 1.5,
+      "tilesH": 1.38
+    },
+    "rail": {
+      "x": 178,
+      "y": 24,
+      "w": 29,
+      "h": 9,
+      "tilesW": 1.81,
+      "tilesH": 0.56
+    },
+    "stalactiteS": {
+      "x": 208,
+      "y": 19,
+      "w": 12,
+      "h": 14,
+      "tilesW": 0.75,
+      "tilesH": 0.88
+    },
+    "stalactiteM": {
+      "x": 221,
+      "y": 14,
+      "w": 17,
+      "h": 19,
+      "tilesW": 1.06,
+      "tilesH": 1.19
+    },
+    "stalactiteL": {
+      "x": 239,
+      "y": 8,
+      "w": 21,
+      "h": 25,
+      "tilesW": 1.31,
+      "tilesH": 1.56
+    },
+    "stalagmiteS": {
+      "x": 261,
+      "y": 20,
+      "w": 11,
+      "h": 13,
+      "tilesW": 0.69,
+      "tilesH": 0.81
+    },
+    "stalagmiteM": {
+      "x": 273,
+      "y": 15,
+      "w": 18,
+      "h": 18,
+      "tilesW": 1.13,
+      "tilesH": 1.13
+    },
+    "stalagmiteL": {
+      "x": 292,
+      "y": 7,
+      "w": 23,
+      "h": 26,
+      "tilesW": 1.44,
+      "tilesH": 1.63
+    },
+    "boulder": {
+      "x": 316,
+      "y": 15,
+      "w": 21,
+      "h": 18,
+      "tilesW": 1.31,
+      "tilesH": 1.13
+    },
+    "boulderCracked": {
+      "x": 338,
+      "y": 15,
+      "w": 22,
+      "h": 18,
+      "tilesW": 1.38,
+      "tilesH": 1.13
+    },
+    "crystalPurple": {
+      "x": 361,
+      "y": 11,
+      "w": 21,
+      "h": 22,
+      "tilesW": 1.31,
+      "tilesH": 1.38
+    },
+    "crystalBlueBig": {
+      "x": 383,
+      "y": 10,
+      "w": 20,
+      "h": 23,
+      "tilesW": 1.25,
+      "tilesH": 1.44
+    },
+    "oreGold": {
+      "x": 404,
+      "y": 18,
+      "w": 20,
+      "h": 15,
+      "tilesW": 1.25,
+      "tilesH": 0.94
+    },
+    "oreSilver": {
+      "x": 425,
+      "y": 20,
+      "w": 19,
+      "h": 13,
+      "tilesW": 1.19,
+      "tilesH": 0.81
+    },
+    "mushroomGiant": {
+      "x": 445,
+      "y": 7,
+      "w": 27,
+      "h": 26,
+      "tilesW": 1.69,
+      "tilesH": 1.63
+    },
+    "mossGlow": {
+      "x": 473,
+      "y": 24,
+      "w": 26,
+      "h": 9,
+      "tilesW": 1.63,
+      "tilesH": 0.56
+    },
+    "spiderWeb": {
+      "x": 500,
+      "y": 13,
+      "w": 19,
+      "h": 20,
+      "tilesW": 1.19,
+      "tilesH": 1.25
+    },
+    "springPool": {
+      "x": 520,
+      "y": 24,
+      "w": 34,
+      "h": 9,
+      "tilesW": 2.13,
+      "tilesH": 0.56
+    },
+    "bossDoor": {
+      "x": 555,
+      "y": 1,
+      "w": 31,
+      "h": 32,
+      "tilesW": 1.94,
+      "tilesH": 2
+    },
+    "barricade": {
+      "x": 587,
+      "y": 12,
+      "w": 29,
+      "h": 21,
+      "tilesW": 1.81,
+      "tilesH": 1.31
+    },
+    "torchStand": {
+      "x": 617,
+      "y": 0,
+      "w": 9,
+      "h": 33,
+      "tilesW": 0.56,
+      "tilesH": 2.06
+    },
+    "oldGear": {
+      "x": 627,
+      "y": 20,
+      "w": 32,
+      "h": 13,
+      "tilesW": 2,
+      "tilesH": 0.81
+    },
+    "warnPost": {
+      "x": 660,
+      "y": 9,
+      "w": 14,
+      "h": 24,
+      "tilesW": 0.88,
+      "tilesH": 1.5
+    },
+    "ropeLantern": {
+      "x": 675,
+      "y": 5,
+      "w": 10,
+      "h": 28,
+      "tilesW": 0.63,
+      "tilesH": 1.75
+    },
+    "ladderSeg": {
+      "x": 686,
+      "y": 4,
+      "w": 15,
+      "h": 29,
+      "tilesW": 0.94,
+      "tilesH": 1.81
+    },
+    "ropeHook": {
+      "x": 702,
+      "y": 20,
+      "w": 25,
+      "h": 13,
+      "tilesW": 1.56,
+      "tilesH": 0.81
+    }
+  }
+}

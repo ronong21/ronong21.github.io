@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "토비 용사단",
+  "short_name": "토비 용사단",
+  "description": "토비가 판 굴이 곧 던전이다 — 옆 단면 마을 경영 RPG",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#241C2B",
+  "theme_color": "#241C2B",
+  "icons": [
+    { "src": "./pwa/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./pwa/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "source": "assets/source/drafts/ux/hud-rebuild-20261101/hud-parts-v1.png",
+  "scale": 4,
+  "parts": {
+    "clock": {
+      "left": 32,
+      "top": 36,
+      "width": 688,
+      "height": 196,
+      "w": 172,
+      "h": 49,
+      "scale": 4
+    },
+    "money": {
+      "left": 739,
+      "top": 73,
+      "width": 500,
+      "height": 156,
+      "w": 125,
+      "h": 39,
+      "scale": 4
+    },
+    "menu": {
+      "left": 1264,
+      "top": 32,
+      "width": 244,
+      "height": 208,
+      "w": 61,
+      "h": 52,
+      "scale": 4
+    },
+    "build": {
+      "left": 79,
+      "top": 244,
+      "width": 328,
+      "height": 284,
+      "w": 82,
+      "h": 71,
+      "scale": 4
+    },
+    "profile": {
+      "left": 479,
+      "top": 244,
+      "width": 320,
+      "height": 292,
+      "w": 80,
+      "h": 73,
+      "scale": 4
+    },
+    "zoomIn": {
+      "left": 901,
+      "top": 302,
+      "width": 232,
+      "height": 204,
+      "w": 58,
+      "h": 51,
+      "scale": 4
+    },
+    "zoomOut": {
+      "left": 1200,
+      "top": 297,
+      "width": 236,
+      "height": 208,
+      "w": 59,
+      "h": 52,
+      "scale": 4
+    },
+    "godHand": {
+      "left": 35,
+      "top": 530,
+      "width": 448,
+      "height": 300,
+      "w": 75,
+      "h": 50,
+      "scale": 6
+    },
+    "godMedal": {
+      "left": 505,
+      "top": 533,
+      "width": 248,
+      "height": 274,
+      "w": 41,
+      "h": 46,
+      "scale": 6
+    },
+    "godStrip": {
+      "left": 797,
+      "top": 591,
+      "width": 712,
+      "height": 164,
+      "w": 178,
+      "h": 41,
+      "scale": 4
+    },
+    "chargeOn": {
+      "left": 103,
+      "top": 843,
+      "width": 128,
+      "height": 128,
+      "w": 32,
+      "h": 32,
+      "scale": 4
+    },
+    "chargeOff": {
+      "left": 259,
+      "top": 843,
+      "width": 128,
+      "height": 128,
+      "w": 32,
+      "h": 32,
+      "scale": 4
+    },
+    "counter": {
+      "left": 496,
+      "top": 835,
+      "width": 512,
+      "height": 136,
+      "w": 128,
+      "h": 34,
+      "scale": 4
+    },
+    "action": {
+      "left": 1064,
+      "top": 788,
+      "width": 440,
+      "height": 104,
+      "w": 110,
+      "h": 26,
+      "scale": 4
+    },
+    "actionMuted": {
+      "left": 1064,
+      "top": 887,
+      "width": 440,
+      "height": 112,
+      "w": 110,
+      "h": 28,
+      "scale": 4
+    }
+  }
+}

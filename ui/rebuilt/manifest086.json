@@ -1,0 +1,41 @@
+{
+  "source": "assets/source/drafts/ux/hud-086/parts.png",
+  "parts": {
+    "clockDay": {
+      "left": 25,
+      "top": 16,
+      "width": 1484,
+      "height": 254,
+      "w": 212,
+      "h": 36,
+      "scale": 7
+    },
+    "clockNight": {
+      "left": 25,
+      "top": 278,
+      "width": 1484,
+      "height": 254,
+      "w": 212,
+      "h": 36,
+      "scale": 7
+    },
+    "buildPlain": {
+      "left": 228,
+      "top": 545,
+      "width": 536,
+      "height": 440,
+      "w": 77,
+      "h": 63,
+      "scale": 7
+    },
+    "profilePlain": {
+      "left": 804,
+      "top": 560,
+      "width": 488,
+      "height": 422,
+      "w": 81,
+      "h": 70,
+      "scale": 6
+    }
+  }
+}

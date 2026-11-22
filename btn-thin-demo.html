@@ -1,0 +1,49 @@
+<!doctype html>
+<!-- 얇은 버튼 견본(엔딩 세션 2026-10-31) — 옛 btnOrange/btnBlue 와 새 btnThin* 를 같은 --px 로 나란히 -->
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>버튼 견본 — 옛 것 · 얇은 것</title>
+<style>
+  :root { --px: 2px; --ink: #241c2b; }
+  body { margin: 0; padding: 16px; background: #8fd0f0; font-family: "Galmuri11", "DungGeunMo", system-ui, sans-serif; color: var(--ink); }
+  h2 { font-size: 14px; margin: 18px 0 8px; }
+  .row { display: flex; gap: calc(6 * var(--px)); align-items: center; flex-wrap: wrap; }
+  button { font: inherit; font-weight: 700; font-size: calc(11 * var(--px)); background: transparent; border-style: solid; border-radius: 0; cursor: pointer; }
+  /* 옛 것 — init toby-ui.css 그대로 */
+  .old { border-width: calc(12 * var(--px)); border-image: url("/ui/btnOrange.png") 12 fill repeat; border-image-width: calc(12 * var(--px)); padding: calc(2 * var(--px)) calc(8 * var(--px)); color: #fff; text-shadow: var(--px) var(--px) 0 var(--ink); }
+  .old.blue { border-width: calc(10 * var(--px)); border-image: url("/ui/btnBlue.png") 10 fill repeat; border-image-width: calc(10 * var(--px)); }
+  /* 새 것 — 테두리 5 원본px · 글자 둘레 여백 위아래 4 · 좌우 10 원본px · 높이 최소 28 */
+  .thin { border-width: calc(5 * var(--px)); border-image: url("/ui/btnThinOrange.png") 5 fill repeat; border-image-width: calc(5 * var(--px));
+          padding: calc(4 * var(--px)) calc(10 * var(--px)) calc(5 * var(--px)); min-height: calc(28 * var(--px)); min-width: calc(44 * var(--px));
+          line-height: 1; color: #fff; text-shadow: var(--px) var(--px) 0 var(--ink); }
+  .thin.blue { border-image-source: url("/ui/btnThinBlue.png"); }
+  .thin.gray { border-image-source: url("/ui/btnThinGray.png"); color: var(--ink); text-shadow: none; }
+  .thin.cream { border-image-source: url("/ui/btnThinCream.png"); color: var(--ink); text-shadow: none; }
+  .thin:active, .thin.down { border-image-source: url("/ui/btnThinOrangeDown.png"); padding-top: calc(5 * var(--px)); padding-bottom: calc(4 * var(--px)); }
+  .thin.blue:active, .thin.blue.down { border-image-source: url("/ui/btnThinBlueDown.png"); }
+  .x3 { --px: var(--px3); }
+  /* 실금 막기(PA §0-2): 글자 길이로 너비가 정해지면 기기 px 소수가 생긴다 → 너비 · 높이를 게임 px 정수배로 못박고 글자는 그 안 가운데 */
+  .thin { box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; height: calc(28 * var(--px)); padding: 0 0 var(--px); white-space: nowrap; }
+  .thin.down, .thin:active { padding: var(--px) 0 0; }
+  .w44 { width: calc(44 * var(--px)); } .w64 { width: calc(64 * var(--px)); }
+  h2, .row { margin: 0; height: calc(var(--rowH) * var(--px)); line-height: calc(var(--rowH) * var(--px)); }
+  h2 { --rowH: 14; font-size: calc(6 * var(--px)); } .row { --rowH: 36; }
+  body { padding: calc(8 * var(--px)); }
+</style>
+<script>
+  // --px 를 «기기 px 정수» 로: 게임 1px = round(2·dpr) 기기 px (dpr 2.625 → 5 기기 px). 제작 세션 --px 계산과 같은 뜻
+  const d = devicePixelRatio || 1;
+  document.documentElement.style.setProperty("--px", Math.round(2 * d) / d + "px");
+  document.documentElement.style.setProperty("--px3", Math.round(3 * d) / d + "px");
+</script>
+</head>
+<body>
+  <h2>옛 버튼(지금 게임) · --px 2</h2>
+  <div class="row" style="--rowH:64"><button class="old">토비 정보</button><button class="old blue">신의 권능</button></div>
+  <h2>얇은 버튼 · --px 2</h2>
+  <div class="row"><button class="thin w64">토비 정보</button><button class="thin blue w64">신의 권능</button><button class="thin gray w44">닫기</button><button class="thin cream w44">짓기</button><button class="thin down w44">눌림</button></div>
+  <h2>얇은 버튼 · --px 3</h2>
+  <div class="row x3"><button class="thin w64">토비 정보</button><button class="thin blue w64">신의 권능</button><button class="thin w44">공격</button></div>
+</body>
+</html>

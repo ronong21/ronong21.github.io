@@ -1,0 +1,261 @@
+{
+  "srcPerPx": 11,
+  "rects": {
+    "pwLantern": {
+      "x": 0,
+      "y": 10,
+      "w": 13,
+      "h": 14,
+      "tilesW": 0.81,
+      "tilesH": 0.88
+    },
+    "pwBless": {
+      "x": 14,
+      "y": 8,
+      "w": 15,
+      "h": 16,
+      "tilesW": 0.94,
+      "tilesH": 1
+    },
+    "pwBolt": {
+      "x": 30,
+      "y": 10,
+      "w": 10,
+      "h": 14,
+      "tilesW": 0.63,
+      "tilesH": 0.88
+    },
+    "pwRain": {
+      "x": 41,
+      "y": 11,
+      "w": 14,
+      "h": 13,
+      "tilesW": 0.88,
+      "tilesH": 0.81
+    },
+    "pwCall": {
+      "x": 56,
+      "y": 12,
+      "w": 16,
+      "h": 12,
+      "tilesW": 1,
+      "tilesH": 0.75
+    },
+    "pwBounty": {
+      "x": 73,
+      "y": 8,
+      "w": 14,
+      "h": 16,
+      "tilesW": 0.88,
+      "tilesH": 1
+    },
+    "pwRevive": {
+      "x": 88,
+      "y": 9,
+      "w": 13,
+      "h": 15,
+      "tilesW": 0.81,
+      "tilesH": 0.94
+    },
+    "pwFaith": {
+      "x": 102,
+      "y": 9,
+      "w": 12,
+      "h": 15,
+      "tilesW": 0.75,
+      "tilesH": 0.94
+    },
+    "star1": {
+      "x": 115,
+      "y": 13,
+      "w": 11,
+      "h": 11,
+      "tilesW": 0.69,
+      "tilesH": 0.69
+    },
+    "star2": {
+      "x": 127,
+      "y": 16,
+      "w": 16,
+      "h": 8,
+      "tilesW": 1,
+      "tilesH": 0.5
+    },
+    "star3": {
+      "x": 144,
+      "y": 13,
+      "w": 16,
+      "h": 11,
+      "tilesW": 1,
+      "tilesH": 0.69
+    },
+    "badgeLocked": {
+      "x": 161,
+      "y": 0,
+      "w": 13,
+      "h": 24,
+      "tilesW": 0.81,
+      "tilesH": 1.5
+    },
+    "badgeDone": {
+      "x": 175,
+      "y": 11,
+      "w": 14,
+      "h": 13,
+      "tilesW": 0.88,
+      "tilesH": 0.81
+    },
+    "badgeNext": {
+      "x": 190,
+      "y": 14,
+      "w": 17,
+      "h": 10,
+      "tilesW": 1.06,
+      "tilesH": 0.63
+    },
+    "badgeNew": {
+      "x": 208,
+      "y": 12,
+      "w": 13,
+      "h": 12,
+      "tilesW": 0.81,
+      "tilesH": 0.75
+    },
+    "badgeWarn": {
+      "x": 222,
+      "y": 12,
+      "w": 13,
+      "h": 12,
+      "tilesW": 0.81,
+      "tilesH": 0.75
+    },
+    "pointer1": {
+      "x": 236,
+      "y": 10,
+      "w": 11,
+      "h": 14,
+      "tilesW": 0.69,
+      "tilesH": 0.88
+    },
+    "pointer2": {
+      "x": 248,
+      "y": 9,
+      "w": 12,
+      "h": 15,
+      "tilesW": 0.75,
+      "tilesH": 0.94
+    },
+    "autoOn": {
+      "x": 261,
+      "y": 10,
+      "w": 14,
+      "h": 14,
+      "tilesW": 0.88,
+      "tilesH": 0.88
+    },
+    "autoOff": {
+      "x": 276,
+      "y": 10,
+      "w": 14,
+      "h": 14,
+      "tilesW": 0.88,
+      "tilesH": 0.88
+    },
+    "soundOn": {
+      "x": 291,
+      "y": 12,
+      "w": 15,
+      "h": 12,
+      "tilesW": 0.94,
+      "tilesH": 0.75
+    },
+    "soundOff": {
+      "x": 307,
+      "y": 12,
+      "w": 15,
+      "h": 12,
+      "tilesW": 0.94,
+      "tilesH": 0.75
+    },
+    "album": {
+      "x": 323,
+      "y": 10,
+      "w": 14,
+      "h": 14,
+      "tilesW": 0.88,
+      "tilesH": 0.88
+    },
+    "settings": {
+      "x": 338,
+      "y": 10,
+      "w": 14,
+      "h": 14,
+      "tilesW": 0.88,
+      "tilesH": 0.88
+    },
+    "hanger": {
+      "x": 353,
+      "y": 10,
+      "w": 16,
+      "h": 14,
+      "tilesW": 1,
+      "tilesH": 0.88
+    },
+    "hatStand": {
+      "x": 370,
+      "y": 8,
+      "w": 15,
+      "h": 16,
+      "tilesW": 0.94,
+      "tilesH": 1
+    },
+    "paintBucket": {
+      "x": 386,
+      "y": 10,
+      "w": 13,
+      "h": 14,
+      "tilesW": 0.81,
+      "tilesH": 0.88
+    },
+    "mirror": {
+      "x": 400,
+      "y": 8,
+      "w": 12,
+      "h": 16,
+      "tilesW": 0.75,
+      "tilesH": 1
+    },
+    "needle": {
+      "x": 413,
+      "y": 9,
+      "w": 14,
+      "h": 15,
+      "tilesW": 0.88,
+      "tilesH": 0.94
+    },
+    "dyeBlue": {
+      "x": 428,
+      "y": 10,
+      "w": 12,
+      "h": 14,
+      "tilesW": 0.75,
+      "tilesH": 0.88
+    },
+    "dyeRed": {
+      "x": 441,
+      "y": 10,
+      "w": 12,
+      "h": 14,
+      "tilesW": 0.75,
+      "tilesH": 0.88
+    },
+    "giftRibbon": {
+      "x": 454,
+      "y": 11,
+      "w": 15,
+      "h": 13,
+      "tilesW": 0.94,
+      "tilesH": 0.81
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "srcPerPx": 6,
+  "rects": {
+    "bellTower": {
+      "x": 0,
+      "y": 0,
+      "w": 54,
+      "h": 72,
+      "tilesW": 3.38,
+      "tilesH": 4.5
+    },
+    "foodCart": {
+      "x": 55,
+      "y": 26,
+      "w": 68,
+      "h": 46,
+      "tilesW": 4.25,
+      "tilesH": 2.88
+    },
+    "trophyHall": {
+      "x": 124,
+      "y": 8,
+      "w": 98,
+      "h": 64,
+      "tilesW": 6.13,
+      "tilesH": 4
+    },
+    "flowerBed": {
+      "x": 223,
+      "y": 60,
+      "w": 25,
+      "h": 12,
+      "tilesW": 1.56,
+      "tilesH": 0.75
+    },
+    "streetLamp": {
+      "x": 249,
+      "y": 28,
+      "w": 15,
+      "h": 44,
+      "tilesW": 0.94,
+      "tilesH": 2.75
+    },
+    "bench": {
+      "x": 265,
+      "y": 58,
+      "w": 27,
+      "h": 14,
+      "tilesW": 1.69,
+      "tilesH": 0.88
+    },
+    "well": {
+      "x": 293,
+      "y": 32,
+      "w": 49,
+      "h": 40,
+      "tilesW": 3.06,
+      "tilesH": 2.5
+    },
+    "fountain": {
+      "x": 343,
+      "y": 42,
+      "w": 37,
+      "h": 30,
+      "tilesW": 2.31,
+      "tilesH": 1.88
+    }
+  }
+}

@@ -1,0 +1,1162 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>그림 아틀라스 · 토비 용사단</title>
+<meta name="description" content="토비 용사단의 직업 모션과 상호작용 오브제 그림을 한 장에서 확인하는 검사용 장표">
+<style>
+@font-face{font-family:Galmuri;src:url('../fonts/Galmuri11.woff2') format('woff2');font-display:swap}
+*{box-sizing:border-box}
+:root{
+  --ink:#fff1cf;--paper:#17121b;--panel:#221a28;--panel2:#2b2232;--line:#3d3144;
+  --gold:#edcf9a;--gold2:#b6814f;--green:#8ee6a1;--muted:#baa99a;--red:#ff7b7b;
+}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 Galmuri,system-ui,-apple-system,"Malgun Gothic",sans-serif}
+button{font:inherit;color:inherit}
+[hidden]{display:none!important}
+a{color:var(--gold)}
+.wrap{max-width:1240px;margin:auto;padding:0 18px}
+header.top{position:sticky;top:0;z-index:20;background:rgba(23,18,27,.94);border-bottom:2px solid var(--line);backdrop-filter:blur(6px)}
+.top-row{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;padding:14px 0 10px}
+h1{font-size:22px;line-height:1.3;margin:0}
+.mark{display:inline-block;background:var(--gold);color:#241c2b;font-size:12px;padding:2px 7px;border-radius:3px;margin-right:8px;vertical-align:3px}
+.lead{margin:4px 0 0;color:var(--muted);font-size:13px}
+.summary{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.summary b{color:var(--gold);font-size:15px}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:0 0 10px}
+.tab{flex:0 0 auto;border:2px solid var(--line);background:var(--panel);border-radius:5px;padding:8px 14px;cursor:pointer;min-height:40px;white-space:nowrap}
+.tab[aria-selected=true]{background:var(--gold);border-color:var(--gold);color:#241c2b;font-weight:700}
+.tab:focus-visible,.chip:focus-visible,.btn:focus-visible,.obj-card:focus-visible,.thumb:focus-visible,.gh-frame:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+main{padding:22px 0 60px}
+section.view{animation:fade .16s ease-out}
+@keyframes fade{from{opacity:.4}to{opacity:1}}
+.view-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0 0 10px}
+.view-head h2{font-size:19px;margin:0}
+.view-head p{margin:0;color:var(--muted);font-size:13px}
+.group{margin:26px 0 6px}
+.group-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:2px solid var(--line);padding-bottom:6px;margin-bottom:14px}
+.group-head h3{margin:0;font-size:17px;color:var(--gold)}
+.group-head span{font-size:12px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:14px}
+.char-card{background:var(--panel);border:2px solid var(--line);border-radius:7px;padding:12px;display:flex;flex-direction:column;gap:9px;min-width:0}
+.char-card:hover{border-color:var(--gold2)}
+.card-top{display:flex;align-items:center;gap:8px}
+.card-top h3{margin:0;font-size:16px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pill{font-size:10px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 7px;white-space:nowrap}
+.sprite-wrap{background:linear-gradient(180deg,#1d1622,#191320);border:1px solid #342938;border-radius:5px;display:flex;justify-content:center;padding:2px}
+.sprite-wrap canvas{width:100%;max-width:190px;height:auto;image-rendering:pixelated}
+.motion-row{display:flex;flex-wrap:wrap;gap:5px}
+.chip{border:1px solid #5a4460;background:#332639;border-radius:4px;padding:4px 8px;font-size:12px;cursor:pointer;min-height:31px}
+.chip[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:#241c2b;font-weight:700}
+.strip{display:flex;flex-wrap:wrap;gap:4px;min-height:52px}
+.thumb{padding:0;border:2px solid #3a2e40;background:#191320;border-radius:3px;cursor:pointer;line-height:0}
+.thumb canvas{width:56px;height:auto;image-rendering:pixelated}
+.thumb.on{border-color:var(--red);box-shadow:0 0 0 1px var(--red)}
+.card-bottom{display:flex;align-items:center;gap:8px;margin-top:auto}
+.sheet-ref{font-size:11px;color:#8f8094;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.btn{border:2px solid var(--gold2);background:#3a2a33;border-radius:4px;padding:5px 9px;font-size:12px;cursor:pointer;min-height:32px}
+.btn:hover{background:#4a3540}
+.toolbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--panel);border:2px solid var(--line);border-radius:7px;padding:10px 14px;margin:14px 0 4px}
+.toolbar label{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+input[type=range]{accent-color:var(--gold);width:130px}
+input[type=search]{font:inherit;background:#17121b;border:2px solid var(--line);border-radius:4px;color:var(--ink);padding:7px 10px;min-width:220px}
+input[type=search]:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.obj-section{margin:30px 0}
+.obj-section h2{font-size:18px;margin:0;color:var(--gold)}
+.obj-section .sec-note{color:var(--muted);font-size:12px;margin:3px 0 12px}
+.obj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(206px,1fr));gap:11px}
+.obj-card{display:flex;flex-direction:column;align-items:stretch;gap:2px;background:var(--panel);border:2px solid var(--line);border-radius:6px;padding:8px;cursor:pointer;text-align:left;min-width:0}
+.obj-card:hover{border-color:var(--gold2);background:#271e2d}
+.obj-stage{display:flex;justify-content:center;align-items:center;background:linear-gradient(180deg,#1d1622,#191320);border:1px solid #342938;border-radius:4px;overflow:hidden}
+.obj-stage canvas{width:100%;max-width:220px;height:auto;image-rendering:pixelated}
+.obj-name{font-size:13px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.obj-key{font:11px/1.4 ui-monospace,Consolas,monospace;color:#8f8094;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.obj-size{font-size:10px;color:#7d6f82}
+.gh-layout{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:18px;align-items:start;margin-top:14px}
+.gh-stage{background:var(--panel);border:2px solid var(--line);border-radius:7px;padding:12px;text-align:center}
+.gh-stage canvas{width:100%;max-width:240px;height:auto;image-rendering:pixelated}
+.gh-stage h3{margin:6px 0 0;font-size:15px}
+.gh-stage p{margin:2px 0 0;color:var(--muted);font-size:12px;min-height:20px}
+.gh-controls{background:var(--panel);border:2px solid var(--line);border-radius:7px;padding:12px}
+.gh-classes{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px}
+.gh-frames{display:grid;grid-template-columns:repeat(auto-fill,minmax(58px,1fr));gap:5px;margin-top:10px}
+.gh-frame{padding:0;border:2px solid #3a2e40;background:#191320;border-radius:3px;cursor:pointer;line-height:0}
+.gh-frame canvas{width:100%;height:auto;image-rendering:pixelated}
+.gh-frame.on{border-color:var(--red);box-shadow:0 0 0 1px var(--red)}
+.gh-frame span{display:block;font:9px/1.2 ui-monospace,monospace;color:#8f8094;padding:2px 0 3px;text-align:center}
+.gh-now{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.gh-now b{color:var(--gold)}
+/* 사다리 8프레임 */
+.ladder-layout{display:grid;grid-template-columns:minmax(280px,360px) 1fr;gap:16px;align-items:start}
+.ladder-stage{background:var(--panel);border:2px solid var(--line);border-radius:7px;padding:10px;text-align:center}
+.ladder-stage canvas{width:100%;max-width:320px;height:auto;image-rendering:pixelated;background:#141019;border:1px solid #342938;border-radius:4px}
+.ladder-stage p{margin:6px 0 0;color:var(--muted);font-size:12px}
+.ladder-controls{background:var(--panel);border:2px solid var(--line);border-radius:7px;padding:12px;display:flex;flex-direction:column;gap:10px}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.btn[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:#241c2b;font-weight:700}
+.ladder-frames{display:grid;grid-template-columns:repeat(auto-fill,minmax(58px,1fr));gap:5px}
+.ladder-frames .thumb canvas{width:100%}
+.ladder-note{margin:0;color:#8f8094;font-size:12px;line-height:1.5}
+.ladder-note code{color:var(--muted);background:#211a26;padding:1px 4px;border-radius:3px}
+.before-after{margin:16px 0 0;background:var(--panel);border:2px solid var(--line);border-radius:7px;padding:10px}
+.before-after img{display:block;width:100%;height:auto;image-rendering:pixelated;border-radius:4px}
+.before-after figcaption{margin:8px 0 0;color:var(--muted);font-size:12px}
+footer{border-top:2px solid var(--line);margin-top:40px;padding:18px 0 40px;color:#8f8094;font-size:12px}
+footer code{color:var(--muted);background:#211a26;padding:1px 4px;border-radius:3px}
+.overlay{position:fixed;inset:0;z-index:50;background:rgba(10,7,13,.86);display:flex;align-items:center;justify-content:center;padding:14px}
+.overlay-card{background:var(--panel);border:2px solid var(--gold2);border-radius:8px;width:fit-content;min-width:min(560px,100%);max-width:min(1020px,calc(100vw - 28px));max-height:94vh;display:flex;flex-direction:column}
+.overlay-head{display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid var(--line)}
+.overlay-head h2{font-size:16px;margin:0;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.overlay-scroll{overflow:auto;padding:14px;background:#17121b}
+.overlay-scroll canvas{display:block;max-width:100%;height:auto;image-rendering:pixelated;margin:auto}
+.overlay-note{padding:0 14px 12px;color:var(--muted);font-size:12px;margin:0}
+@media(max-width:760px){
+  h1{font-size:18px}
+  .summary{margin-left:0;width:100%}
+  .cards{grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+  .obj-grid{grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:8px}
+  .gh-layout{grid-template-columns:1fr}
+  .toolbar{gap:10px}
+  input[type=search]{min-width:0;width:100%}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="top-row">
+      <div>
+        <h1><span class="mark">그림</span>토비 용사단 · 그림 아틀라스</h1>
+        <p class="lead">직업 모션과 상호작용 오브제를 한 장에서 확인합니다. 그림을 누르면 크게 보고 원본 시트의 칸까지 짚어 줍니다.</p>
+      </div>
+      <div class="summary">
+        <span>토비 직업 <b id="nJobs">–</b></span>
+        <span>모험가 <b id="nClasses">–</b></span>
+        <span>오브제 <b id="nObjects">–</b></span>
+        <span>신의 손 <b id="nGh">–</b></span>
+      </div>
+    </div>
+    <div class="tabs" role="tablist" aria-label="아틀라스 갈래">
+      <button class="tab" role="tab" id="tab-jobs" aria-controls="view-jobs" aria-selected="true">직업 모션</button>
+      <button class="tab" role="tab" id="tab-objects" aria-controls="view-objects" aria-selected="false">상호작용 오브제</button>
+      <button class="tab" role="tab" id="tab-gh" aria-controls="view-gh" aria-selected="false">신의 손</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="view" id="view-jobs" role="tabpanel" aria-labelledby="tab-jobs">
+    <div class="view-head">
+      <h2>직업 캐릭터 모션</h2>
+      <p>동작 단추를 누르면 그 자리에서 이어서 재생합니다. 아래 칸 띠로 낱장도 볼 수 있어요.</p>
+    </div>
+    <div class="toolbar">
+      <label>재생 속도 <input id="speed" type="range" min="0.4" max="2" step="0.1" value="1"><output id="speedOut">1.0×</output></label>
+      <button class="btn" id="flip" type="button" aria-pressed="false">좌우 반전</button>
+      <span class="lead">모든 그림은 게임과 같은 칸(40×32)에서 그립니다. 실제 화면에서는 정수 배율로만 확대합니다.</span>
+    </div>
+    <div class="group">
+      <div class="group-head"><h3>토비 직업</h3><span>5가지 · 직업마다 서기 · 걷기 · 공격 · 쓰러짐 · 요리 · 포획 · 망치질</span></div>
+      <div class="cards" id="toby-jobs"></div>
+    </div>
+    <div class="group">
+      <div class="group-head"><h3>모험가 10직업</h3><span>처음 5직업 + 전직 5직업 · 서기 · 걷기 · 공격 · 쓰러짐 · 일하기 · 잠 · 환호 · 사다리 · 붙잡힘</span></div>
+      <div class="cards" id="adv-classes"></div>
+    </div>
+    <div class="group" id="ladder-group">
+      <div class="group-head"><h3>사다리 8프레임 (신규)</h3><span>완전 뒷모습 · 8칸 · 오르기/내려가기(역재생) · 가로대 안내선 · 전후 비교</span></div>
+      <div class="ladder-layout">
+        <div class="ladder-stage">
+          <canvas id="ladderCanvas" width="320" height="256" aria-label="토비 모험가 사다리 8프레임 재생"></canvas>
+          <p id="ladderNow">오르기 · 1 / 8</p>
+        </div>
+        <div class="ladder-controls">
+          <div class="seg" id="ladderDir" role="group" aria-label="사다리 방향">
+            <button class="btn" type="button" data-dir="up" aria-pressed="true">오르기 (정방향)</button>
+            <button class="btn" type="button" data-dir="down" aria-pressed="false">내려가기 (역재생)</button>
+          </div>
+          <div class="seg">
+            <button class="btn" id="ladderPlay" type="button" aria-pressed="true">멈춤</button>
+            <button class="btn" id="ladderRungs" type="button" aria-pressed="true">가로대 켜기</button>
+            <button class="btn" type="button" data-lspeed="0.5">0.5×</button>
+            <button class="btn" type="button" data-lspeed="1" aria-pressed="true">1×</button>
+          </div>
+          <div class="ladder-frames" id="ladderFrames" role="group" aria-label="사다리 프레임"></div>
+          <p class="ladder-note"><code>ladder/toby-adventurer-ladder-8f.png</code> · 320×32 · 8칸(40×32) · 피벗 x=20 · 발끝 y=31. 내려가기는 같은 8칸을 역순으로 재생합니다. 가로대는 검수용 안내선이며 게임 그림이 아닙니다.</p>
+        </div>
+      </div>
+      <figure class="before-after">
+        <img src="ladder/ladder-before-after.png" alt="사다리 전후 비교: 기존 2프레임과 새 8프레임">
+        <figcaption>전후 비교 — 위: 기존 <code>chars2</code> 0줄 0~1칸(2프레임) · 아래: 새 <code>toby-adventurer-ladder-8f</code>(8프레임, 뒷모습 고정, 팔·다리 교대)</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="view" id="view-objects" role="tabpanel" aria-labelledby="tab-objects" hidden>
+    <div class="view-head">
+      <h2>상호작용 오브제</h2>
+      <p>마을 건물 · 보물상자 · 소품 · 축제 소품 · 굴 소품 · 장식. 그림을 누르면 원본 시트에서 어느 칸인지 보여 줍니다.</p>
+    </div>
+    <div class="toolbar">
+      <label>찾기 <input id="objSearch" type="search" placeholder="이름 또는 키 (예: 여관, chestGold)" autocomplete="off"></label>
+      <span class="lead">건물은 지금 쓰는 판(<code>buildings</code>~<code>buildings5</code>)만 싣습니다.</span>
+    </div>
+    <section class="obj-section" id="sec-buildings">
+      <h2>마을 건물 <span class="pill count"></span></h2>
+      <p class="sec-note">지상에 세우는 건물. 모두 정면 입면이고, 아래는 굴 단면입니다. 크기는 게임 칸(16px) 기준으로 적었습니다.</p>
+      <div class="obj-grid"></div>
+    </section>
+    <section class="obj-section" id="sec-chest">
+      <h2>보물상자 <span class="pill count"></span></h2>
+      <p class="sec-note">나무 · 은 · 금 세 등급의 닫힘/열림 짝입니다. 굴에서 재료를 꺼낼 때 씁니다.</p>
+      <div class="obj-grid"></div>
+    </section>
+    <section class="obj-section" id="sec-props">
+      <h2>소품 · 도구 · 아이콘 <span class="pill count"></span></h2>
+      <p class="sec-note">사다리 · 횃불 · 음식 · 장비 · 상태 아이콘까지 한 시트에 있습니다.</p>
+      <div class="obj-grid"></div>
+    </section>
+    <section class="obj-section" id="sec-event">
+      <h2>축제 · 행사 소품 <span class="pill count"></span></h2>
+      <p class="sec-note">축제 · 계절 이벤트에 쓰는 소품과 연출입니다.</p>
+      <div class="obj-grid"></div>
+    </section>
+    <section class="obj-section" id="sec-cave">
+      <h2>굴 소품 <span class="pill count"></span></h2>
+      <p class="sec-note">굴 안의 상자 · 천막 · 광석 · 수정 · 종유석 · 보스 문.</p>
+      <div class="obj-grid"></div>
+    </section>
+    <section class="obj-section" id="sec-decor">
+      <h2>마을 장식 <span class="pill count"></span></h2>
+      <p class="sec-note">나무 · 울타리 · 가로등 · 우물 · 분수처럼 매력도를 올리는 장식.</p>
+      <div class="obj-grid"></div>
+    </section>
+    <section class="obj-section" id="sec-season">
+      <h2>계절 장식 <span class="pill count"></span></h2>
+      <p class="sec-note">벚꽃 · 여름 · 단풍 · 겨울 네 계절 장식.</p>
+      <div class="obj-grid"></div>
+    </section>
+  </section>
+
+  <section class="view" id="view-gh" role="tabpanel" aria-labelledby="tab-gh" hidden>
+    <div class="view-head">
+      <h2>신의 손 28칸</h2>
+      <p>모험가를 붙잡아 던지는 연출의 28칸입니다. 직업을 고르고 칸을 눌러 낱장으로 볼 수 있어요.</p>
+    </div>
+    <div class="gh-layout">
+      <div class="gh-stage">
+        <canvas id="ghCanvas" width="240" height="216" aria-label="신의 손 선택 칸"></canvas>
+        <h3 id="ghName">전사</h3>
+        <p id="ghFrameName">붙잡힘 숨쉬기 1</p>
+      </div>
+      <div class="gh-controls">
+        <div class="gh-classes" id="ghClasses" role="group" aria-label="신의 손 직업"></div>
+        <div class="gh-now">
+          <button class="btn" id="ghPlay" type="button" aria-pressed="true">멈춤</button>
+          <label>칸 <input id="ghSeek" type="range" min="0" max="27" step="1" value="0"><output id="ghSeekOut">1 / 28</output></label>
+        </div>
+        <div class="gh-frames" id="ghFrames"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>그림 원본 <code>public/atlas/*.png</code> · 칸 정보 <code>public/atlas/*.json</code> · 모션 규칙 <code>src/game/render/renderer.ts</code> · 만든 날 2026-11-05</p>
+    <p>새 사다리 8칸 <code>public/atlas/ladder/toby-adventurer-ladder-8f.png</code> · 만든 날 2026-11-05 · 가로대는 검수용 안내선입니다.</p>
+    <p>이 장표는 그림 확인용입니다. 게임 저장 · 재화 · 진행도에 손대지 않습니다. 화면 확대는 정수 배율만 씁니다.</p>
+  </footer>
+</main>
+
+<div class="overlay" id="overlay" hidden>
+  <div class="overlay-card" role="dialog" aria-modal="true" aria-labelledby="ovTitle">
+    <div class="overlay-head">
+      <h2 id="ovTitle">원본 시트</h2>
+      <button class="btn" id="ovClose" type="button">닫기</button>
+    </div>
+    <div class="overlay-scroll"><canvas id="ovCanvas"></canvas></div>
+    <p class="overlay-note" id="ovNote"></p>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var $ = function (s, el) { return (el || document).querySelector(s); };
+  var $$ = function (s, el) { return Array.prototype.slice.call((el || document).querySelectorAll(s)); };
+  var state = { flip: false, speed: 1 };
+
+  /* ---------- 그림 불러오기 ---------- */
+  var images = {};
+  var sheetCache = {};
+
+  function loadImage(src) {
+    if (!images[src]) {
+      images[src] = new Promise(function (resolve, reject) {
+        var img = new Image();
+        img.onload = function () { resolve(img); };
+        img.onerror = function () { reject(new Error("그림을 못 불렀어요: " + src)); };
+        img.src = src;
+      });
+    }
+    return images[src];
+  }
+
+  function getSheet(id) {
+    if (!sheetCache[id]) {
+      sheetCache[id] = (async function () {
+        var img = await loadImage(id + ".png");
+        var meta = null;
+        // 신의 손 시트는 칸이 모두 40×32 라 JSON 이 없어도 된다(ghWarrior 만 있음) — 없는 요청으로 콘솔을 더럽히지 않는다
+        if (id !== "chestGrades" && !/^gh[A-Z]/.test(id)) {
+          try {
+            var res = await fetch(id + ".json");
+            if (res.ok) meta = await res.json();
+          } catch (err) { /* 칸 정보가 없어도 그림은 보여 준다 */ }
+        }
+        return { id: id, img: img, meta: meta };
+      })();
+    }
+    return sheetCache[id];
+  }
+
+  function cellOf(sheet) {
+    if (sheet.meta && sheet.meta.cellW) {
+      return { w: sheet.meta.cellW, h: sheet.meta.cellH, cols: sheet.meta.cols, rows: sheet.meta.rows };
+    }
+    return { w: 40, h: 32, cols: 7, rows: 4 };
+  }
+
+  /* ---------- 칸 그리기 ---------- */
+  function drawCell(ctx, img, cell, row, col, dx, dy, scale, flip) {
+    ctx.save();
+    ctx.imageSmoothingEnabled = false;
+    if (flip) {
+      ctx.translate(ctx.canvas.width, 0);
+      ctx.scale(-1, 1);
+    }
+    ctx.drawImage(
+      img,
+      col * cell.w, row * cell.h, cell.w, cell.h,
+      dx, dy, cell.w * scale, cell.h * scale
+    );
+    ctx.restore();
+  }
+
+  /* ---------- 직업 정의 ---------- */
+  var TOBY_JOBS = [
+    { id: "adventurer", name: "모험가", s1: "chars", r1: 0, s2: "chars2", r2: 0 },
+    { id: "warrior", name: "전사", s1: "tobyJobs", r1: 0, s2: "tobyJobs2", r2: 0 },
+    { id: "mage", name: "마법사", s1: "tobyJobs", r1: 1, s2: "tobyJobs2", r2: 1 },
+    { id: "cook", name: "요리사", s1: "tobyJobs", r1: 2, s2: "tobyJobs2", r2: 2 },
+    { id: "tamer", name: "조련사", s1: "tobyJobs", r1: 3, s2: "tobyJobs2", r2: 3 }
+  ];
+
+  var ADV_CLASSES = [
+    { id: "warrior", name: "전사", s1: "chars", r1: 1, s2: "chars2", r2: 1 },
+    { id: "archer", name: "궁수", s1: "chars", r1: 2, s2: "chars2", r2: 2 },
+    { id: "mage", name: "마법사", s1: "chars", r1: 3, s2: "chars2", r2: 3 },
+    { id: "healer", name: "치유사", s1: "chars3", r1: 0, s2: "chars3", r2: 2 },
+    { id: "miner", name: "광부", s1: "chars3", r1: 1, s2: "chars3", r2: 3 },
+    { id: "knight", name: "기사", s1: "chars4", r1: 0, s2: "chars4", r2: 2 },
+    { id: "ranger", name: "명사수", s1: "chars4", r1: 1, s2: "chars4", r2: 3 },
+    { id: "sage", name: "현자", s1: "chars5", r1: 0, s2: "chars5", r2: 2 },
+    { id: "priest", name: "사제", s1: "chars5", r1: 1, s2: "chars5", r2: 3 },
+    { id: "excavator", name: "굴착꾼", s1: "chars6", r1: 0, s2: "chars6", r2: 2 }
+  ];
+
+  function tobyMotions(c) {
+    var base = [
+      { id: "idle", label: "서기", sheet: c.s1, row: c.r1, cols: [0], ms: 420 },
+      { id: "walk", label: "걷기", sheet: c.s1, row: c.r1, cols: [1, 2, 3, 4], ms: 130 },
+      { id: "attack", label: "공격", sheet: c.s1, row: c.r1, cols: [5, 6], ms: 150 },
+      { id: "down", label: "쓰러짐", sheet: c.s2, row: c.r2, cols: [2], ms: 420 },
+      { id: "ladder", label: "사다리(옛 2칸)", sheet: c.s2, row: c.r2, cols: [0, 1], ms: 220 },
+      { id: "cook", label: "요리", sheet: c.s2, row: c.r2, cols: [3], ms: 420 },
+      { id: "capture", label: "포획", sheet: c.s2, row: c.r2, cols: [4], ms: 420 },
+      // 망치질은 직업 시트가 아니라 chars6 2줄 0 · 1칸을 쓴다(renderer.ts drawToby)
+      { id: "craft", label: "망치질", sheet: "chars6", row: 1, cols: [0, 1], ms: 200 }
+    ];
+    // 토비 모험가만 새 사다리 8칸(뒷모습 전용)을 따로 가진다. 나머지 직업은 옛 2칸을 그대로 둔다.
+    if (c.id === "adventurer") {
+      base.splice(4, 1,
+        { id: "climbUp", label: "사다리 오르기 8칸", sheet: LADDER8_SHEET, row: 0, cols: [0, 1, 2, 3, 4, 5, 6, 7], ms: 110, climb: true },
+        { id: "climbDown", label: "사다리 내려가기 8칸", sheet: LADDER8_SHEET, row: 0, cols: [7, 6, 5, 4, 3, 2, 1, 0], ms: 110, climb: true },
+        { id: "ladder", label: "사다리(옛 2칸)", sheet: c.s2, row: c.r2, cols: [0, 1], ms: 220 }
+      );
+    }
+    return base;
+  }
+
+  /* 새 사다리 8프레임 시트 — 토비 모험가 전용 */
+  var LADDER8_SHEET = "ladder/toby-adventurer-ladder-8f";
+
+  /* 검수용 사다리 가로대 — 게임 그림이 아니라 자세를 보려고 까는 안내선 */
+  function drawLadderRungs(ctx) {
+    var w = ctx.canvas.width, h = ctx.canvas.height;
+    ctx.save();
+    ctx.fillStyle = "rgba(110,90,68,.55)";
+    for (var y = h * 0.08; y < h; y += h / 6) {
+      ctx.fillRect(Math.round(w * 0.1), Math.round(y), Math.round(w * 0.8), Math.max(2, Math.round(h / 80)));
+    }
+    ctx.fillStyle = "rgba(110,90,68,.28)";
+    ctx.fillRect(Math.round(w * 0.2), 0, 3, h);
+    ctx.fillRect(Math.round(w * 0.8) - 3, 0, 3, h);
+    ctx.restore();
+  }
+
+  function classMotions(c) {
+    return [
+      { id: "idle", label: "서기", sheet: c.s1, row: c.r1, cols: [0], ms: 420 },
+      { id: "walk", label: "걷기", sheet: c.s1, row: c.r1, cols: [1, 2, 3, 4], ms: 130 },
+      { id: "attack", label: "공격", sheet: c.s1, row: c.r1, cols: [5, 6], ms: 150 },
+      { id: "down", label: "쓰러짐", sheet: c.s2, row: c.r2, cols: [3], ms: 420 },
+      { id: "use", label: "일하기", sheet: c.s2, row: c.r2, cols: [4], ms: 420 },
+      { id: "sleep", label: "잠", sheet: c.s2, row: c.r2, cols: [5], ms: 420 },
+      { id: "cheer", label: "환호", sheet: c.s2, row: c.r2, cols: [6], ms: 300 },
+      { id: "climb", label: "사다리", sheet: c.s2, row: c.r2, cols: [0, 1], ms: 220 },
+      { id: "held", label: "붙잡힘", sheet: c.s2, row: c.r2, cols: [2], ms: 420 }
+    ];
+  }
+
+  var charCards = [];
+
+  function makeCharCard(char, motions, sheets, kindLabel) {
+    var card = document.createElement("article");
+    card.className = "char-card";
+
+    var top = document.createElement("div");
+    top.className = "card-top";
+    var h = document.createElement("h3");
+    h.textContent = char.name;
+    var pill = document.createElement("span");
+    pill.className = "pill";
+    pill.textContent = kindLabel;
+    top.appendChild(h);
+    top.appendChild(pill);
+
+    var wrap = document.createElement("div");
+    wrap.className = "sprite-wrap";
+    var canvas = document.createElement("canvas");
+    canvas.width = 176;
+    canvas.height = 144;
+    wrap.appendChild(canvas);
+
+    var row = document.createElement("div");
+    row.className = "motion-row";
+
+    var strip = document.createElement("div");
+    strip.className = "strip";
+
+    var bottom = document.createElement("div");
+    bottom.className = "card-bottom";
+    var ref = document.createElement("span");
+    ref.className = "sheet-ref";
+    var sheetBtn = document.createElement("button");
+    sheetBtn.type = "button";
+    sheetBtn.className = "btn";
+    sheetBtn.textContent = "원본 시트";
+    bottom.appendChild(ref);
+    bottom.appendChild(sheetBtn);
+
+    card.appendChild(top);
+    card.appendChild(wrap);
+    card.appendChild(row);
+    card.appendChild(strip);
+    card.appendChild(bottom);
+
+    var ctx = canvas.getContext("2d");
+    var cs = {
+      char: char, motions: motions, sheets: sheets, ctx: ctx, canvas: canvas,
+      idx: 0, frame: 0, acc: 0, thumbs: [],
+      speedOf: function (m) { return m.ms; }
+    };
+
+    function paint() {
+      var m = cs.motions[cs.idx];
+      var sheet = cs.sheets[m.sheet];
+      var cell = cellOf(sheet);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (m.climb) {
+        drawLadderRungs(ctx);
+      } else {
+        ctx.fillStyle = "rgba(237,207,154,.10)";
+        ctx.beginPath();
+        ctx.ellipse(88, 137, 45, 5, 0, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      drawCell(ctx, sheet.img, cell, m.row, m.cols[cs.frame], 8, 8, 4, state.flip);
+      for (var i = 0; i < cs.thumbs.length; i++) {
+        cs.thumbs[i].classList.toggle("on", i === cs.frame);
+      }
+    }
+
+    function buildStrip() {
+      var m = cs.motions[cs.idx];
+      var sheet = cs.sheets[m.sheet];
+      var cell = cellOf(sheet);
+      strip.innerHTML = "";
+      cs.thumbs = [];
+      m.cols.forEach(function (col, i) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "thumb";
+        b.title = "칸 " + col;
+        b.setAttribute("aria-label", m.label + " " + (i + 1) + "번째 칸");
+        var cv = document.createElement("canvas");
+        cv.width = 80;
+        cv.height = 64;
+        var c2 = cv.getContext("2d");
+        drawCell(c2, sheet.img, cell, m.row, col, 0, 0, 2, state.flip);
+        b.appendChild(cv);
+        b.addEventListener("click", function () { cs.frame = i; cs.acc = 0; paint(); });
+        strip.appendChild(b);
+        cs.thumbs.push(b);
+      });
+      paint();
+    }
+
+    function setMotion(i) {
+      cs.idx = i;
+      cs.frame = 0;
+      cs.acc = 0;
+      $$(".chip", row).forEach(function (b, j) { b.setAttribute("aria-pressed", j === i ? "true" : "false"); });
+      var m = cs.motions[i];
+      ref.textContent = m.sheet + " · " + (m.row + 1) + "줄 · " + m.cols.length + "칸";
+      buildStrip();
+    }
+
+    motions.forEach(function (m, i) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "chip";
+      b.textContent = m.label;
+      b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+      b.addEventListener("click", function () { setMotion(i); });
+      row.appendChild(b);
+    });
+
+    sheetBtn.addEventListener("click", function () {
+      var m = cs.motions[cs.idx];
+      openSheetView({
+        sheet: m.sheet,
+        title: char.name + " · " + m.label,
+        note: m.sheet + " · " + (m.row + 1) + "줄 · " + (m.cols[cs.frame] + 1) + "번째 칸",
+        row: m.row,
+        col: m.cols[cs.frame]
+      });
+    });
+
+    // 카드 그림을 눌러도 «원본 시트» 와 같은 곳을 연다(머리말 설명과 같게)
+    wrap.style.cursor = "pointer";
+    wrap.title = "눌러서 원본 시트 보기";
+    wrap.addEventListener("click", function () { sheetBtn.click(); });
+
+    card._cs = cs;
+    setMotion(0);
+    return card;
+  }
+
+  async function initJobs() {
+    var tobyHost = $("#toby-jobs");
+    var advHost = $("#adv-classes");
+
+    var all = TOBY_JOBS.map(function (c) { return { c: c, motions: tobyMotions(c), kind: "토비 직업" }; })
+      .concat(ADV_CLASSES.map(function (c) { return { c: c, motions: classMotions(c), kind: "모험가" }; }));
+
+    for (var i = 0; i < all.length; i++) {
+      var item = all[i];
+      var need = {};
+      item.motions.forEach(function (m) { need[m.sheet] = true; });
+      var sheets = {};
+      var ids = Object.keys(need);
+      for (var j = 0; j < ids.length; j++) sheets[ids[j]] = await getSheet(ids[j]);
+      var card = makeCharCard(item.c, item.motions, sheets, item.kind);
+      charCards.push(card);
+      (item.kind === "토비 직업" ? tobyHost : advHost).appendChild(card);
+    }
+
+    $("#nJobs").textContent = String(TOBY_JOBS.length);
+    $("#nClasses").textContent = String(ADV_CLASSES.length);
+  }
+
+  /* ---------- 오브제 ---------- */
+  var OBJECT_LABELS = {
+    /* buildings */
+    bistro: "토비 비스트로", inn: "여관", weaponShop: "무기점", armorShop: "방어구점",
+    caveEntrance: "굴 입구", shrine: "등불 사당", toolShop: "도구점", forge: "대장간",
+    houseA: "모험가 집 A", houseB: "모험가 집 B", hotSpring: "온천", barn: "헛간",
+    field: "밭", trainingGround: "훈련장", requestBoard: "의뢰 게시판", guildHall: "길드 회관",
+    chapel: "치유소", bakery: "빵집", petHouse: "펫 하우스", watchtower: "망루",
+    oreStore: "광석 창고", teaHouse: "찻집", flowerShop: "꽃집", stage: "공연장",
+    monsterStable: "몬스터 마구간", mageTower: "마법사 탑", postOffice: "우체국", bank: "은행",
+    clockTower: "시계탑", tobyStatue: "토비 동상", villageGate: "마을 문",
+    gardenPavilion: "정원 정자", lanternTemple: "큰 등불 사원", festivalStage: "축제 무대",
+    trophyHall: "트로피 전당", villageHall: "마을 회관", rebirthAltar: "환생 제단",
+    marketStalls: "시장 노점", foodCart: "푸드 카트", repBoard: "평판 게시판",
+    bellTower: "수호 종루", snowLodge: "눈 산장",
+    /* chest */
+    chestWoodClosed: "나무 상자 (닫힘)", chestSilverClosed: "은 상자 (닫힘)", chestGoldClosed: "금 상자 (닫힘)",
+    chestWoodOpen: "나무 상자 (열림)", chestSilverOpen: "은 상자 (열림)", chestGoldOpen: "금 상자 (열림)",
+    /* props */
+    ladder: "사다리", wallTorch: "벽 횃불", post: "기둥", paperLantern: "종이 등불",
+    sack: "자루", coinPile: "금화 더미", coin: "금화", arrowSign: "화살표 표지판",
+    soup: "수프", carrot: "당근", mushroom: "버섯", bread: "빵", pot: "냄비", bowl: "그릇",
+    tea: "찻잔", pie: "파이", woodSword: "나무 검", ironSword: "쇠 검", shortBow: "짧은 활",
+    longBow: "긴 활", staff: "지팡이", amberStaff: "호박 지팡이", shield: "방패",
+    leatherCap: "가죽 모자", iconHeart: "하트", iconStar: "별", iconSparkle: "반짝임",
+    iconHand: "손", iconThought: "생각", iconSwords: "쌍검", iconMoon: "달", iconSun: "해",
+    /* event */
+    bbqGrill: "바비큐 화로", feastTable: "잔칫상", campPot: "야영 냄비", picnicMat: "소풍 돗자리",
+    watermelonStand: "수박 가판대", watermelonSmashed: "쪼갠 수박", riceCakeBox: "떡 상자",
+    honeyJar: "꿀단지", podium: "연단", trophy: "트로피", rosette: "리본 훈장",
+    scoreboard: "점수판", drum: "북", trumpet: "나팔", archeryTarget: "과녁",
+    potDummy: "항아리 과녁", rocket: "로켓", burstSmall: "작은 폭죽", burstBig: "큰 폭죽",
+    sparkles: "반짝이", festivalTorch: "축제 횃불", skyLantern: "하늘 등불", bonfire: "모닥불",
+    lightString: "전구 줄", snowballs: "눈덩이", icePond: "얼음 연못", kite: "연",
+    sandPail: "모래 양동이", leafJump: "낙엽 더미", harvestBasket: "수확 바구니",
+    flowerCrown: "꽃관", luckyCharm: "행운 부적",
+    /* cave */
+    chestClosed: "동굴 상자 (닫힘)", chestOpen: "동굴 상자 (열림)", campfire: "모닥불",
+    tent: "천막", bedroll: "침낭", cartEmpty: "빈 수레", cartOre: "광석 수레", rail: "레일",
+    stalactiteS: "종유석 (소)", stalactiteM: "종유석 (중)", stalactiteL: "종유석 (대)",
+    stalagmiteS: "석순 (소)", stalagmiteM: "석순 (중)", stalagmiteL: "석순 (대)",
+    boulder: "바위", boulderCracked: "갈라진 바위", crystalPurple: "보라 수정",
+    crystalBlueBig: "큰 파란 수정", oreGold: "금 광석", oreSilver: "은 광석",
+    mushroomGiant: "거대 버섯", mossGlow: "빛이끼", spiderWeb: "거미줄", springPool: "샘물",
+    bossDoor: "보스 문", barricade: "바리케이드", torchStand: "횃불대", oldGear: "옛 톱니",
+    warnPost: "경고 표지", ropeLantern: "밧줄 등불", ladderSeg: "사다리 조각", ropeHook: "밧줄 갈고리",
+    /* decor */
+    bigTree: "큰 나무", pine: "소나무", youngTree: "어린 나무", bush: "덤불",
+    flowerBed: "꽃밭", fence: "울타리", streetLamp: "가로등", bench: "벤치",
+    barrel: "통", crates: "상자 더미", well: "우물", signpost: "이정표",
+    grassTuft: "풀더미", mossRocks: "이끼 바위", noticeBoard: "게시판", fountain: "분수",
+    /* season */
+    cherryTree: "벚꽃 나무", cherrySapling: "벚꽃 묘목", tulipBed: "튤립 화단", bunting: "천 깃발",
+    planter: "화분", flowerArch: "꽃 아치", summerTree: "여름 나무", sunflowers: "해바라기",
+    lanternString: "등불 줄", festivalStall: "축제 노점", watermelons: "수박", windChime: "풍경",
+    mapleTree: "단풍 나무", ginkgoTree: "은행 나무", leafPile: "낙엽 더미", pumpkins: "호박",
+    scarecrow: "허수아비", hayBales: "건초 더미", snowPine: "눈 소나무", snowTree: "눈 나무",
+    snowman: "눈사람", festiveFir: "축제 전나무", snowDrift: "눈더미", sled: "썰매"
+  };
+
+  var CHEST_RECTS = {
+    chestWoodClosed: { x: 4, y: 11, w: 24, h: 18 },
+    chestSilverClosed: { x: 36, y: 11, w: 24, h: 18 },
+    chestGoldClosed: { x: 68, y: 11, w: 24, h: 18 },
+    chestWoodOpen: { x: 3, y: 38, w: 26, h: 23 },
+    chestSilverOpen: { x: 35, y: 38, w: 26, h: 23 },
+    chestGoldOpen: { x: 67, y: 38, w: 26, h: 23 }
+  };
+
+  var OBJ_SECTIONS = [
+    { id: "buildings", sheets: ["buildings", "buildings2", "buildings3", "buildings4", "buildings5"], chest: false, scale: 2 },
+    { id: "chest", sheets: ["chestGrades"], chest: true, scale: 6 },
+    { id: "props", sheets: ["props"], chest: false, scale: 4 },
+    { id: "event", sheets: ["eventProps"], chest: false, scale: 4 },
+    { id: "cave", sheets: ["caveProps"], chest: false, scale: 4 },
+    { id: "decor", sheets: ["decor"], chest: false, scale: 2 },
+    { id: "season", sheets: ["decorSeason"], chest: false, scale: 3 }
+  ];
+
+  var objectCount = 0;
+
+  function makeObjectCard(sheetId, key, rect, meta, scaleHint) {
+    var name = OBJECT_LABELS[key] || key;
+    var card = document.createElement("button");
+    card.type = "button";
+    card.className = "obj-card";
+    card.dataset.search = (name + " " + key + " " + sheetId).toLowerCase();
+    card.title = name + " · " + sheetId + " → " + key;
+
+    var stage = document.createElement("span");
+    stage.className = "obj-stage";
+    var canvas = document.createElement("canvas");
+    canvas.width = 220;
+    canvas.height = 184;
+    stage.appendChild(canvas);
+
+    var nm = document.createElement("span");
+    nm.className = "obj-name";
+    nm.textContent = name;
+    var kk = document.createElement("span");
+    kk.className = "obj-key";
+    kk.textContent = sheetId + " · " + key;
+    var sz = document.createElement("span");
+    sz.className = "obj-size";
+    var tiles = meta && meta.rects[key] && meta.rects[key].tilesW
+      ? " · " + meta.rects[key].tilesW + "×" + meta.rects[key].tilesH + "칸"
+      : "";
+    sz.textContent = rect.w + "×" + rect.h + "px" + tiles;
+
+    card.appendChild(stage);
+    card.appendChild(nm);
+    card.appendChild(kk);
+    card.appendChild(sz);
+
+    var img = null;
+    var ctx = canvas.getContext("2d");
+
+    loadImage(sheetId + ".png").then(function (loaded) {
+      img = loaded;
+      var scale = Math.max(1, Math.min(scaleHint, Math.floor(220 / rect.w), Math.floor(176 / rect.h)));
+      var dw = rect.w * scale;
+      var dh = rect.h * scale;
+      var dx = Math.round((220 - dw) / 2);
+      var dy = 176 - dh;
+      ctx.imageSmoothingEnabled = false;
+      ctx.clearRect(0, 0, 220, 184);
+      ctx.fillStyle = "rgba(237,207,154,.07)";
+      ctx.beginPath();
+      ctx.ellipse(110, 177, Math.max(18, dw / 2), 4, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.drawImage(img, rect.x, rect.y, rect.w, rect.h, dx, dy, dw, dh);
+    });
+
+    card.addEventListener("click", function () {
+      openSheetView({
+        sheet: sheetId,
+        title: name,
+        note: sheetId + " · " + key + " · " + rect.w + "×" + rect.h + "px",
+        rect: rect
+      });
+    });
+
+    return card;
+  }
+
+  async function initObjects() {
+    for (var i = 0; i < OBJ_SECTIONS.length; i++) {
+      var sec = OBJ_SECTIONS[i];
+      var host = $("#sec-" + sec.id + " .obj-grid");
+      var n = 0;
+      for (var j = 0; j < sec.sheets.length; j++) {
+        var id = sec.sheets[j];
+        var sheet = await getSheet(id);
+        var rects = sec.chest ? CHEST_RECTS : (sheet.meta && sheet.meta.rects ? sheet.meta.rects : {});
+        var keys = Object.keys(rects);
+        for (var k = 0; k < keys.length; k++) {
+          host.appendChild(makeObjectCard(id, keys[k], rects[keys[k]], sheet.meta, sec.scale));
+          n++;
+          objectCount++;
+        }
+      }
+      var countEl = $("#sec-" + sec.id + " .count");
+      if (countEl) countEl.textContent = n + "개";
+    }
+    $("#nObjects").textContent = String(objectCount);
+  }
+
+  /* ---------- 원본 시트 보기 ---------- */
+  async function openSheetView(opt) {
+    var sheet = await getSheet(opt.sheet);
+    var cell = cellOf(sheet);
+    var img = sheet.img;
+    var maxW = 960;
+    var scale = Math.max(1, Math.min(opt.row != null ? 3 : 2, Math.floor(maxW / img.width)));
+    if (opt.row != null) scale = Math.max(2, Math.min(3, Math.floor(maxW / img.width)));
+
+    var cv = $("#ovCanvas");
+    cv.width = img.width * scale;
+    cv.height = img.height * scale;
+    var ctx = cv.getContext("2d");
+    ctx.imageSmoothingEnabled = false;
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.drawImage(img, 0, 0, cv.width, cv.height);
+
+    if (opt.row != null) {
+      ctx.strokeStyle = "#ff7b7b";
+      ctx.lineWidth = 3;
+      ctx.strokeRect(
+        opt.col * cell.w * scale + 1.5,
+        opt.row * cell.h * scale + 1.5,
+        cell.w * scale - 3,
+        cell.h * scale - 3
+      );
+      ctx.fillStyle = "rgba(255,123,123,.12)";
+      ctx.fillRect(opt.col * cell.w * scale, opt.row * cell.h * scale, cell.w * scale, cell.h * scale);
+    }
+
+    if (opt.rect) {
+      var r = opt.rect;
+      ctx.strokeStyle = "#ff7b7b";
+      ctx.lineWidth = 3;
+      ctx.strokeRect(r.x * scale + 1.5, r.y * scale + 1.5, r.w * scale - 3, r.h * scale - 3);
+      ctx.fillStyle = "rgba(255,123,123,.12)";
+      ctx.fillRect(r.x * scale, r.y * scale, r.w * scale, r.h * scale);
+    }
+
+    $("#ovTitle").textContent = opt.title;
+    $("#ovNote").textContent = (opt.note || "") + " · 시트 " + img.width + "×" + img.height + " · " + scale + "배";
+    $("#overlay").hidden = false;
+    document.body.style.overflow = "hidden";
+    $("#ovClose").focus();
+  }
+
+  function closeOverlay() {
+    $("#overlay").hidden = true;
+    document.body.style.overflow = "";
+  }
+
+  /* ---------- 신의 손 ---------- */
+  var GH_CLASSES = [
+    { id: "ghWarrior", name: "전사" }, { id: "ghKnight", name: "기사" },
+    { id: "ghArcher", name: "궁수" }, { id: "ghRanger", name: "명사수" },
+    { id: "ghMage", name: "마법사" }, { id: "ghSage", name: "현자" },
+    { id: "ghHealer", name: "치유사" }, { id: "ghPriest", name: "사제" },
+    { id: "ghMiner", name: "광부" }, { id: "ghExcavator", name: "굴착꾼" }
+  ];
+
+  var GH_NAMES = [
+    "붙잡힘 숨쉬기 1", "붙잡힘 숨쉬기 2", "붙잡힘 당기기 1", "붙잡힘 당기기 2",
+    "붙잡힘 놀람", "붙잡힘 몸부림 1", "붙잡힘 몸부림 2", "던져 올리기 1",
+    "던져 올리기 2", "솟아오르기 1", "솟아오르기 2", "꼭대기",
+    "떨어지기 1", "떨어지기 2", "허우적 1", "허우적 2",
+    "튕기기 1", "튕기기 2", "부드러운 착지", "세게 착지 1",
+    "세게 착지 2", "어지러움 1", "어지러움 2", "어지러움 3",
+    "회복 1", "회복 2", "무서움 1", "무서움 2"
+  ];
+
+  var gh = { cls: 0, frame: 0, playing: true, acc: 0, sheets: {}, thumbs: [] };
+
+  async function initGh() {
+    $("#nGh").textContent = String(GH_CLASSES.length);
+
+    for (var i = 0; i < GH_CLASSES.length; i++) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "chip";
+      b.textContent = GH_CLASSES[i].name;
+      b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+      b.dataset.i = String(i);
+      b.addEventListener("click", function () {
+        gh.cls = Number(this.dataset.i);
+        $$("#ghClasses .chip").forEach(function (x) { x.setAttribute("aria-pressed", x === this ? "true" : "false"); }, this);
+        $("#ghName").textContent = GH_CLASSES[gh.cls].name;
+        buildGhFrames();
+      });
+      $("#ghClasses").appendChild(b);
+    }
+
+    gh.sheets[GH_CLASSES[0].id] = await getSheet(GH_CLASSES[0].id);
+    buildGhFrames();
+  }
+
+  function ghSheet() {
+    return gh.sheets[GH_CLASSES[gh.cls].id];
+  }
+
+  async function ensureGhSheet() {
+    var id = GH_CLASSES[gh.cls].id;
+    if (!gh.sheets[id]) gh.sheets[id] = await getSheet(id);
+    return gh.sheets[id];
+  }
+
+  function paintGh() {
+    var s = gh.sheets[GH_CLASSES[gh.cls].id];
+    if (!s) return;
+    var ctx = $("#ghCanvas").getContext("2d");
+    // 신의 손 시트는 40×32 칸이다(ghWarrior.json cellW·cellH). 32 로 그리면 옆 칸이 섞인다.
+    var cell = cellOf(s);
+    ctx.clearRect(0, 0, 240, 216);
+    ctx.fillStyle = "rgba(237,207,154,.10)";
+    ctx.beginPath();
+    ctx.ellipse(120, 204, 58, 6, 0, 0, Math.PI * 2);
+    ctx.fill();
+    drawCell(ctx, s.img, cell, Math.floor(gh.frame / 7), gh.frame % 7, 0, 12, 6, state.flip);
+    for (var i = 0; i < gh.thumbs.length; i++) gh.thumbs[i].classList.toggle("on", i === gh.frame);
+    $("#ghSeek").value = String(gh.frame);
+    $("#ghSeekOut").textContent = (gh.frame + 1) + " / 28";
+    $("#ghFrameName").textContent = GH_NAMES[gh.frame];
+  }
+
+  async function buildGhFrames() {
+    var s = await ensureGhSheet();
+    var host = $("#ghFrames");
+    var cell = cellOf(s);
+    host.innerHTML = "";
+    gh.thumbs = [];
+    for (var i = 0; i < 28; i++) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "gh-frame";
+      b.title = GH_NAMES[i];
+      b.dataset.i = String(i);
+      var cv = document.createElement("canvas");
+      cv.width = cell.w * 2;
+      cv.height = cell.h * 2;
+      var c2 = cv.getContext("2d");
+      drawCell(c2, s.img, cell, Math.floor(i / 7), i % 7, 0, 0, 2, state.flip);
+      var lab = document.createElement("span");
+      lab.textContent = String(i + 1);
+      b.appendChild(cv);
+      b.appendChild(lab);
+      b.addEventListener("click", function () {
+        gh.frame = Number(this.dataset.i);
+        gh.playing = false;
+        $("#ghPlay").setAttribute("aria-pressed", "false");
+        $("#ghPlay").textContent = "재생";
+        paintGh();
+      });
+      host.appendChild(b);
+      gh.thumbs.push(b);
+    }
+    paintGh();
+  }
+
+  /* ---------- 사다리 8프레임 재생 ---------- */
+  var ladder = { sheet: null, frame: 0, acc: 0, playing: true, dir: "up", speed: 1, rungs: true, thumbs: [] };
+
+  function paintLadder() {
+    var cv = $("#ladderCanvas");
+    if (!cv || !ladder.sheet) return;
+    var ctx = cv.getContext("2d");
+    var cell = cellOf(ladder.sheet);
+    var S = 8;
+    var shown = ladder.dir === "up" ? ladder.frame : (cell.cols - 1 - ladder.frame);
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    if (ladder.rungs) drawLadderRungs(ctx);
+    else {
+      ctx.fillStyle = "rgba(237,207,154,.10)";
+      ctx.beginPath();
+      ctx.ellipse(cv.width / 2, cv.height - 6, 70, 6, 0, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.imageSmoothingEnabled = false;
+    ctx.drawImage(ladder.sheet.img, shown * cell.w, 0, cell.w, cell.h, 0, 0, cell.w * S, cell.h * S);
+    $("#ladderNow").textContent =
+      (ladder.dir === "up" ? "오르기 (정방향)" : "내려가기 (역재생)") + " · " + (ladder.frame + 1) + " / " + cell.cols;
+    ladder.thumbs.forEach(function (t, i) {
+      t.classList.toggle("on", i === shown);
+    });
+  }
+
+  async function initLadder() {
+    var sheet = await getSheet(LADDER8_SHEET);
+    ladder.sheet = sheet;
+    var cell = cellOf(sheet);
+    var host = $("#ladderFrames");
+    host.innerHTML = "";
+    ladder.thumbs = [];
+    for (var i = 0; i < cell.cols; i++) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "thumb";
+      b.title = "칸 " + (i + 1);
+      b.setAttribute("aria-label", "사다리 " + (i + 1) + "번째 칸");
+      var cv = document.createElement("canvas");
+      cv.width = 80;
+      cv.height = 64;
+      drawCell(cv.getContext("2d"), sheet.img, cell, 0, i, 0, 0, 2, false);
+      b.appendChild(cv);
+      b.addEventListener("click", function (idx) {
+        return function () {
+          ladder.frame = idx;
+          ladder.playing = false;
+          ladder.acc = 0;
+          var btn = $("#ladderPlay");
+          btn.setAttribute("aria-pressed", "false");
+          btn.textContent = "재생";
+          paintLadder();
+        };
+      }(i));
+      host.appendChild(b);
+      ladder.thumbs.push(b);
+    }
+
+    $("#ladderPlay").addEventListener("click", function () {
+      ladder.playing = !ladder.playing;
+      this.setAttribute("aria-pressed", ladder.playing ? "true" : "false");
+      this.textContent = ladder.playing ? "멈춤" : "재생";
+    });
+
+    $("#ladderRungs").addEventListener("click", function () {
+      ladder.rungs = !ladder.rungs;
+      this.setAttribute("aria-pressed", ladder.rungs ? "true" : "false");
+      this.textContent = ladder.rungs ? "가로대 켜기" : "가로대 끄기";
+      paintLadder();
+    });
+
+    $$("#ladderDir .btn").forEach(function (b) {
+      b.addEventListener("click", function () {
+        ladder.dir = b.dataset.dir;
+        $$("#ladderDir .btn").forEach(function (o) { o.setAttribute("aria-pressed", o === b ? "true" : "false"); });
+        paintLadder();
+      });
+    });
+
+    $$("[data-lspeed]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        ladder.speed = Number(b.dataset.lspeed) || 1;
+        $$("[data-lspeed]").forEach(function (o) { o.setAttribute("aria-pressed", o === b ? "true" : "false"); });
+      });
+    });
+
+    paintLadder();
+  }
+
+  /* ---------- 탭 ---------- */
+  var TABS = ["jobs", "objects", "gh"];
+  function selectTab(id) {
+    TABS.forEach(function (t) {
+      var on = t === id;
+      $("#tab-" + t).setAttribute("aria-selected", on ? "true" : "false");
+      $("#view-" + t).hidden = !on;
+    });
+    if (id === "gh") {
+      ensureGhSheet().then(function () { paintGh(); });
+    }
+    if (history.replaceState) history.replaceState(null, "", "#" + id);
+  }
+
+  TABS.forEach(function (t) {
+    $("#tab-" + t).addEventListener("click", function () { selectTab(t); });
+  });
+
+  /* ---------- 재생 ---------- */
+  var last = performance.now();
+  function tick(now) {
+    var dt = now - last;
+    last = now;
+    if (!document.hidden) {
+      for (var i = 0; i < charCards.length; i++) {
+        var cs = charCards[i]._cs;
+        var m = cs.motions[cs.idx];
+        cs.acc += dt * state.speed;
+        if (cs.acc >= m.ms) {
+          cs.acc = 0;
+          if (m.cols.length > 1) {
+            cs.frame = (cs.frame + 1) % m.cols.length;
+            cs._dirty = true;
+          }
+        }
+        if (cs._dirty) {
+          cs._dirty = false;
+          var sheet = cs.sheets[m.sheet];
+          var cell = cellOf(sheet);
+          cs.ctx.clearRect(0, 0, cs.canvas.width, cs.canvas.height);
+          cs.ctx.fillStyle = "rgba(237,207,154,.10)";
+          cs.ctx.beginPath();
+          cs.ctx.ellipse(88, 137, 45, 5, 0, 0, Math.PI * 2);
+          cs.ctx.fill();
+          drawCell(cs.ctx, sheet.img, cell, m.row, m.cols[cs.frame], 8, 8, 4, state.flip);
+          for (var t = 0; t < cs.thumbs.length; t++) cs.thumbs[t].classList.toggle("on", t === cs.frame);
+        }
+      }
+
+      if (gh.playing && gh.thumbs.length) {
+        gh.acc += dt * state.speed;
+        if (gh.acc >= 130) {
+          gh.acc = 0;
+          gh.frame = (gh.frame + 1) % 28;
+          paintGh();
+        }
+      }
+
+      if (ladder.playing && ladder.sheet) {
+        ladder.acc += dt * ladder.speed;
+        if (ladder.acc >= 110) {
+          ladder.acc = 0;
+          ladder.frame = (ladder.frame + 1) % 8;
+          paintLadder();
+        }
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+
+  /* ---------- 연결 ---------- */
+  $("#speed").addEventListener("input", function () {
+    state.speed = Number(this.value) || 1;
+    $("#speedOut").textContent = state.speed.toFixed(1) + "×";
+  });
+
+  $("#flip").addEventListener("click", function () {
+    state.flip = !state.flip;
+    this.setAttribute("aria-pressed", state.flip ? "true" : "false");
+    charCards.forEach(function (c) {
+      var cs = c._cs;
+      var m = cs.motions[cs.idx];
+      var sheet = cs.sheets[m.sheet];
+      var cell = cellOf(sheet);
+      cs.ctx.clearRect(0, 0, cs.canvas.width, cs.canvas.height);
+      if (m.climb) {
+        drawLadderRungs(cs.ctx);
+      } else {
+        cs.ctx.fillStyle = "rgba(237,207,154,.10)";
+        cs.ctx.beginPath();
+        cs.ctx.ellipse(88, 137, 45, 5, 0, 0, Math.PI * 2);
+        cs.ctx.fill();
+      }
+      drawCell(cs.ctx, sheet.img, cell, m.row, m.cols[cs.frame], 8, 8, 4, state.flip);
+      // 칸 띠도 다시
+      var strip = c.querySelector(".strip");
+      var thumbs = $$(".thumb", strip);
+      m.cols.forEach(function (col, i) {
+        var cv = thumbs[i] && thumbs[i].querySelector("canvas");
+        if (!cv) return;
+        var c2 = cv.getContext("2d");
+        c2.clearRect(0, 0, cv.width, cv.height);
+        drawCell(c2, sheet.img, cell, m.row, col, 0, 0, 2, state.flip);
+      });
+    });
+    if (gh.thumbs.length) buildGhFrames();
+  });
+
+  $("#objSearch").addEventListener("input", function () {
+    var q = this.value.trim().toLowerCase();
+    $$(".obj-section").forEach(function (sec) {
+      var shown = 0;
+      $$(".obj-card", sec).forEach(function (card) {
+        var hit = !q || card.dataset.search.indexOf(q) !== -1;
+        card.hidden = !hit;
+        if (hit) shown++;
+      });
+      sec.hidden = shown === 0;
+    });
+  });
+
+  $("#ovClose").addEventListener("click", closeOverlay);
+  $("#overlay").addEventListener("click", function (e) {
+    if (e.target === this) closeOverlay();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !$("#overlay").hidden) closeOverlay();
+  });
+
+  $("#ghPlay").addEventListener("click", function () {
+    gh.playing = !gh.playing;
+    this.setAttribute("aria-pressed", gh.playing ? "true" : "false");
+    this.textContent = gh.playing ? "멈춤" : "재생";
+  });
+
+  $("#ghSeek").addEventListener("input", function () {
+    gh.frame = Number(this.value);
+    gh.playing = false;
+    $("#ghPlay").setAttribute("aria-pressed", "false");
+    $("#ghPlay").textContent = "재생";
+    paintGh();
+  });
+
+  /* ---------- 시작 ---------- */
+  (async function () {
+    try {
+      await initJobs();
+      await initObjects();
+      await initGh();
+      await initLadder();
+      if (location.hash === "#objects") selectTab("objects");
+      else if (location.hash === "#gh") selectTab("gh");
+      requestAnimationFrame(tick);
+    } catch (err) {
+      console.error(err);
+      document.querySelector("main").insertAdjacentHTML("afterbegin",
+        '<p style="color:#ff7b7b">그림을 불러오지 못했습니다. 잠시 뒤 다시 열어 주세요. (' + err.message + ')</p>');
+    }
+  })();
+})();
+</script>
+</body>
+</html>

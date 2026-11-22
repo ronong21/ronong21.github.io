@@ -1,0 +1,42 @@
+{
+  "source": "assets/source/drafts/ux/hud-rebuild-20261101/window-parts-v1.png",
+  "scale": 4,
+  "corner": 17,
+  "parts": [
+    [
+      "window",
+      32,
+      80,
+      1472,
+      620
+    ],
+    [
+      "title",
+      40,
+      804,
+      568,
+      140
+    ],
+    [
+      "close",
+      628,
+      804,
+      136,
+      140
+    ],
+    [
+      "button",
+      780,
+      804,
+      424,
+      140
+    ],
+    [
+      "buttonMuted",
+      1216,
+      804,
+      284,
+      140
+    ]
+  ]
+}

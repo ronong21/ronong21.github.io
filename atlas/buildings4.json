@@ -1,0 +1,77 @@
+{
+  "srcPerPx": 6,
+  "rects": {
+    "monsterStable": {
+      "x": 0,
+      "y": 42,
+      "w": 104,
+      "h": 46,
+      "tilesW": 6.5,
+      "tilesH": 2.88
+    },
+    "mageTower": {
+      "x": 105,
+      "y": 8,
+      "w": 56,
+      "h": 80,
+      "tilesW": 3.5,
+      "tilesH": 5
+    },
+    "postOffice": {
+      "x": 162,
+      "y": 40,
+      "w": 84,
+      "h": 48,
+      "tilesW": 5.25,
+      "tilesH": 3
+    },
+    "bank": {
+      "x": 247,
+      "y": 32,
+      "w": 96,
+      "h": 56,
+      "tilesW": 6,
+      "tilesH": 3.5
+    },
+    "clockTower": {
+      "x": 344,
+      "y": 0,
+      "w": 63,
+      "h": 88,
+      "tilesW": 3.94,
+      "tilesH": 5.5
+    },
+    "tobyStatue": {
+      "x": 408,
+      "y": 32,
+      "w": 88,
+      "h": 56,
+      "tilesW": 5.5,
+      "tilesH": 3.5
+    },
+    "villageGate": {
+      "x": 497,
+      "y": 32,
+      "w": 110,
+      "h": 56,
+      "tilesW": 6.88,
+      "tilesH": 3.5
+    },
+    "gardenPavilion": {
+      "x": 608,
+      "y": 48,
+      "w": 59,
+      "h": 40,
+      "tilesW": 3.69,
+      "tilesH": 2.5
+    },
+    "lanternTemple": {
+      "x": 668,
+      "y": 24,
+      "w": 109,
+      "h": 64,
+      "tilesW": 6.81,
+      "tilesH": 4
+    }
+  }
+}

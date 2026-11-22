@@ -1,0 +1,133 @@
+{
+  "srcPerPx": 10,
+  "rects": {
+    "caveCart": {
+      "x": 0,
+      "y": 1,
+      "w": 27,
+      "h": 23,
+      "tilesW": 1.69,
+      "tilesH": 1.44
+    },
+    "caveCrystal": {
+      "x": 28,
+      "y": 0,
+      "w": 23,
+      "h": 24,
+      "tilesW": 1.44,
+      "tilesH": 1.5
+    },
+    "caveLava": {
+      "x": 52,
+      "y": 2,
+      "w": 25,
+      "h": 22,
+      "tilesW": 1.56,
+      "tilesH": 1.38
+    },
+    "lock": {
+      "x": 78,
+      "y": 3,
+      "w": 17,
+      "h": 21,
+      "tilesW": 1.06,
+      "tilesH": 1.31
+    },
+    "tabGear": {
+      "x": 96,
+      "y": 3,
+      "w": 26,
+      "h": 21,
+      "tilesW": 1.63,
+      "tilesH": 1.31
+    },
+    "tabSkill": {
+      "x": 123,
+      "y": 5,
+      "w": 26,
+      "h": 19,
+      "tilesW": 1.63,
+      "tilesH": 1.19
+    },
+    "tabLog": {
+      "x": 150,
+      "y": 3,
+      "w": 24,
+      "h": 21,
+      "tilesW": 1.5,
+      "tilesH": 1.31
+    },
+    "pencil": {
+      "x": 175,
+      "y": 5,
+      "w": 19,
+      "h": 19,
+      "tilesW": 1.19,
+      "tilesH": 1.19
+    },
+    "jobAdventurer": {
+      "x": 195,
+      "y": 2,
+      "w": 25,
+      "h": 22,
+      "tilesW": 1.56,
+      "tilesH": 1.38
+    },
+    "jobWarrior": {
+      "x": 221,
+      "y": 2,
+      "w": 24,
+      "h": 22,
+      "tilesW": 1.5,
+      "tilesH": 1.38
+    },
+    "jobMage": {
+      "x": 246,
+      "y": 2,
+      "w": 24,
+      "h": 22,
+      "tilesW": 1.5,
+      "tilesH": 1.38
+    },
+    "jobCook": {
+      "x": 271,
+      "y": 2,
+      "w": 24,
+      "h": 22,
+      "tilesW": 1.5,
+      "tilesH": 1.38
+    },
+    "jobTamer": {
+      "x": 296,
+      "y": 2,
+      "w": 25,
+      "h": 22,
+      "tilesW": 1.56,
+      "tilesH": 1.38
+    },
+    "itemEmber": {
+      "x": 322,
+      "y": 4,
+      "w": 23,
+      "h": 20,
+      "tilesW": 1.44,
+      "tilesH": 1.25
+    },
+    "itemSpore": {
+      "x": 346,
+      "y": 1,
+      "w": 24,
+      "h": 23,
+      "tilesW": 1.5,
+      "tilesH": 1.44
+    },
+    "itemCrystal": {
+      "x": 371,
+      "y": 1,
+      "w": 22,
+      "h": 23,
+      "tilesW": 1.38,
+      "tilesH": 1.44
+    }
+  }
+}

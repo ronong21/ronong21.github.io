@@ -1,0 +1,261 @@
+{
+  "srcPerPx": 6.75,
+  "rects": {
+    "crystalPink": {
+      "x": 0,
+      "y": 3,
+      "w": 21,
+      "h": 26,
+      "tilesW": 1.31,
+      "tilesH": 1.63
+    },
+    "crystalTeal": {
+      "x": 22,
+      "y": 9,
+      "w": 25,
+      "h": 20,
+      "tilesW": 1.56,
+      "tilesH": 1.25
+    },
+    "crystalSprouts": {
+      "x": 48,
+      "y": 16,
+      "w": 19,
+      "h": 13,
+      "tilesW": 1.19,
+      "tilesH": 0.81
+    },
+    "glowShroom": {
+      "x": 68,
+      "y": 12,
+      "w": 22,
+      "h": 17,
+      "tilesW": 1.38,
+      "tilesH": 1.06
+    },
+    "mossPurple": {
+      "x": 91,
+      "y": 20,
+      "w": 29,
+      "h": 9,
+      "tilesW": 1.81,
+      "tilesH": 0.56
+    },
+    "geode": {
+      "x": 121,
+      "y": 12,
+      "w": 22,
+      "h": 17,
+      "tilesW": 1.38,
+      "tilesH": 1.06
+    },
+    "crystalPool": {
+      "x": 144,
+      "y": 20,
+      "w": 32,
+      "h": 9,
+      "tilesW": 2,
+      "tilesH": 0.56
+    },
+    "pillarStump": {
+      "x": 177,
+      "y": 5,
+      "w": 18,
+      "h": 24,
+      "tilesW": 1.13,
+      "tilesH": 1.5
+    },
+    "crystalStalactite": {
+      "x": 196,
+      "y": 7,
+      "w": 19,
+      "h": 22,
+      "tilesW": 1.19,
+      "tilesH": 1.38
+    },
+    "glowVine": {
+      "x": 216,
+      "y": 0,
+      "w": 17,
+      "h": 29,
+      "tilesW": 1.06,
+      "tilesH": 1.81
+    },
+    "crystalVein": {
+      "x": 234,
+      "y": 12,
+      "w": 22,
+      "h": 17,
+      "tilesW": 1.38,
+      "tilesH": 1.06
+    },
+    "dustMotes": {
+      "x": 257,
+      "y": 14,
+      "w": 16,
+      "h": 15,
+      "tilesW": 1,
+      "tilesH": 0.94
+    },
+    "lanternPlaque": {
+      "x": 274,
+      "y": 9,
+      "w": 21,
+      "h": 20,
+      "tilesW": 1.31,
+      "tilesH": 1.25
+    },
+    "ruinArch": {
+      "x": 296,
+      "y": 6,
+      "w": 36,
+      "h": 23,
+      "tilesW": 2.25,
+      "tilesH": 1.44
+    },
+    "rubyVein": {
+      "x": 333,
+      "y": 13,
+      "w": 21,
+      "h": 16,
+      "tilesW": 1.31,
+      "tilesH": 1
+    },
+    "glowFern": {
+      "x": 355,
+      "y": 10,
+      "w": 18,
+      "h": 19,
+      "tilesW": 1.13,
+      "tilesH": 1.19
+    },
+    "lavaRocks": {
+      "x": 374,
+      "y": 14,
+      "w": 26,
+      "h": 15,
+      "tilesW": 1.63,
+      "tilesH": 0.94
+    },
+    "lavaPool": {
+      "x": 401,
+      "y": 17,
+      "w": 31,
+      "h": 12,
+      "tilesW": 1.94,
+      "tilesH": 0.75
+    },
+    "obsidian": {
+      "x": 433,
+      "y": 10,
+      "w": 18,
+      "h": 19,
+      "tilesW": 1.13,
+      "tilesH": 1.19
+    },
+    "steamVent": {
+      "x": 452,
+      "y": 3,
+      "w": 20,
+      "h": 26,
+      "tilesW": 1.25,
+      "tilesH": 1.63
+    },
+    "emberSprouts": {
+      "x": 473,
+      "y": 17,
+      "w": 17,
+      "h": 12,
+      "tilesW": 1.06,
+      "tilesH": 0.75
+    },
+    "charredStump": {
+      "x": 491,
+      "y": 15,
+      "w": 27,
+      "h": 14,
+      "tilesW": 1.69,
+      "tilesH": 0.88
+    },
+    "magmaCrystal": {
+      "x": 519,
+      "y": 10,
+      "w": 18,
+      "h": 19,
+      "tilesW": 1.13,
+      "tilesH": 1.19
+    },
+    "sulfurPile": {
+      "x": 538,
+      "y": 16,
+      "w": 27,
+      "h": 13,
+      "tilesW": 1.69,
+      "tilesH": 0.81
+    },
+    "lavaStalactite": {
+      "x": 566,
+      "y": 1,
+      "w": 19,
+      "h": 28,
+      "tilesW": 1.19,
+      "tilesH": 1.75
+    },
+    "lavaCrack": {
+      "x": 586,
+      "y": 10,
+      "w": 23,
+      "h": 19,
+      "tilesW": 1.44,
+      "tilesH": 1.19
+    },
+    "basalt": {
+      "x": 610,
+      "y": 1,
+      "w": 32,
+      "h": 28,
+      "tilesW": 2,
+      "tilesH": 1.75
+    },
+    "fireFlower": {
+      "x": 643,
+      "y": 9,
+      "w": 13,
+      "h": 20,
+      "tilesW": 0.81,
+      "tilesH": 1.25
+    },
+    "lavaArch": {
+      "x": 657,
+      "y": 10,
+      "w": 40,
+      "h": 19,
+      "tilesW": 2.5,
+      "tilesH": 1.19
+    },
+    "emberLantern": {
+      "x": 698,
+      "y": 5,
+      "w": 10,
+      "h": 24,
+      "tilesW": 0.63,
+      "tilesH": 1.5
+    },
+    "goldVein": {
+      "x": 709,
+      "y": 13,
+      "w": 23,
+      "h": 16,
+      "tilesW": 1.44,
+      "tilesH": 1
+    },
+    "lavaFall": {
+      "x": 733,
+      "y": 1,
+      "w": 16,
+      "h": 28,
+      "tilesW": 1,
+      "tilesH": 1.75
+    }
+  }
+}

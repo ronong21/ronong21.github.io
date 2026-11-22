@@ -1,0 +1,373 @@
+/*
+ * 토비 UI 키트 — public/ 상대경로 복사본 (ui-kit.css)
+ * 원본은 src/ui/toby-ui.css 와 동일하며, 경로만 /ui·/fonts → ./ui·./fonts 로 바꾼 것이다.
+ * 토비 UI 키트 (toby-ui.css)
+ * ──────────────────────────────────────────────────────────────────────────
+ * 「토비 더 파머」(toby-survey, 같은 소유주)의 UI 문법을 「토비 용사단」으로 옮긴 작은 키트다.
+ * 웜톤(크림 종이 바탕 + 나무 프레임 + 금테·적갈 강조)과 Galmuri 비트맵 픽셀 폰트를 그대로 쓴다.
+ * 그림 부품(창틀·버튼·칩·게이지·슬롯)은 토비가 구워 둔 PNG 를 9-슬라이스(border-image)로 두른다.
+ *
+ * ■ 픽셀 1:1 원칙
+ *   토비 CSS 는 "그림 1픽셀 = 논리 게임 1픽셀" 로 쓴다. 그래서 9-슬라이스의 slice 숫자와
+ *   border-width 가 **같은 값**이다(winFrame 14=14, slotFrame 8=8, gaugeTrack 2=2 …).
+ *   어긋나면 테두리가 그 비율만큼 눌려 스트로크가 뭉갠다.
+ *   이 키트는 한 논리 게임 픽셀이 화면에서 몇 CSS px 인지를 var(--px) 로 받는다(게임 JS 가 지정,
+ *   기본 2px). 모든 테두리/여백/글자 크기는 calc(N * var(--px)) 로 적어 배율을 따라간다.
+ *
+ * ■ 폰트 경로
+ *   Vite 는 public/ 를 사이트 루트(/)로 서빙한다. 그래서 개발 중에도 url("./fonts/...") 절대
+ *   경로가 그대로 뜬다. (상대경로 복사본은 public/ui-kit.css 에 따로 있다.)
+ */
+
+/* ── 폰트 (Galmuri 비트맵 픽셀 폰트) ───────────────────────────────────────── */
+@font-face {
+  font-family: "Galmuri11";
+  src: url("./fonts/Galmuri11.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Galmuri11";
+  src: url("./fonts/Galmuri11-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Galmuri9";
+  src: url("./fonts/Galmuri9.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* ── 색 토큰 (토비 styles.css :root 에서 값 그대로 옮김) ────────────────────── */
+:root {
+  --w: #efdcb9;          /* 창 바탕(크림) */
+  --w-alt: #f6e9cd;      /* 창 바탕 밝은 변 */
+  --paper: #f6e9cd;      /* 파피루스 종이 */
+  --ink: #2b160d;        /* 가장 진한 잉크(테두리·그림자) */
+  --ink-soft: #6b4a3a;   /* 부드러운 잉크 */
+  --text: #3a2415;       /* 본문 글자(다크브라운) */
+  --text-inverse: #fff6e5; /* 어두운 바탕 위 밝은 글자 */
+  --dim: #6c5036;        /* 흐린 글자·비활성 */
+  --wood: #b56321;       /* 나무 램프 3단계 */
+  --wood-hi: #cf772d;    /* 나무 램프 밝은 변 */
+  --track: #7a3f12;      /* 나무에 파인 홈(게이지 트랙 등) */
+  --slot: #7f544e;       /* 슬롯 바탕 */
+  --gold: #f2c14e;       /* 금색 */
+  --gold-hi: #ffe9a8;    /* 금색 밝은 변 */
+  --gold-dark: #a6741c;  /* 금색 어두운 변 */
+  --gold-text: #4a2c05;  /* 금색 바탕 위 글자(대비 7.57:1) */
+  --primary: #a9503a;    /* 적갈 강조(대표 버튼) */
+  --primary-hi: #be6750; /* 적갈 밝은 변 */
+  --success: #27622d;    /* 성공(초록) */
+  --danger: #872322;     /* 위험(적색) */
+  --blue: #2f6fa0;       /* 파랑 버튼 */
+  --blue-hi: #3f80ad;    /* 파랑 밝은 변 */
+  --off: #c4b69e;        /* 꺼짐·비활성 바탕 */
+  --gauge-green: #b5de16; /* 스태미나 초록(gaugeFillGreen.png 본색) */
+
+  /*
+   * 🔴 픽셀 단위 변수 — 한 논리 게임 픽셀이 화면에서 몇 CSS px 인가.
+   *    게임 JS 가 화면 크기에 맞춰 이 값을 바꿔 끼운다(정수배 확대). 기본 2px.
+   *    토비 원본 CSS 의 모든 px 값은 "그림/논리 1px" 기준이라, 여기에 var(--px) 를 곱해
+   *    화면 배율을 입힌다. (예: winFrame 테두리 14 논리px → calc(14 * var(--px)).)
+   */
+  --px: 2px;
+}
+
+/* ── 공통 베이스 ──────────────────────────────────────────────────────────── */
+.tu-window,
+.tu-btn,
+.tu-chip,
+.tu-topbar,
+.tu-gauge,
+.tu-slot,
+.tu-panel,
+.tu-dialog,
+.tu-tab,
+.tu-label {
+  font-family: "Galmuri11", system-ui;
+  -webkit-font-smoothing: none;   /* 픽셀 폰트는 안티에일리어싱을 끄지 않으면 격자가 뭉갠다 */
+  color: var(--text);
+  box-sizing: border-box;
+  image-rendering: pixelated;     /* 9-슬라이스 그림을 정수배로 또렷하게 */
+}
+
+/* ── 창 (winFrame.png 9-슬라이스, 슬라이스 14 = 테두리 14논리px) ───────────── */
+.tu-window {
+  position: relative;
+  border-style: solid;
+  border-width: calc(14 * var(--px));
+  /* 토비 styles.css: border-image: url(winFrame.png) 14 fill repeat */
+  border-image: url("./ui/winFrame.png") 14 fill repeat;
+  border-radius: 0;
+  padding: calc(12 * var(--px));
+  color: var(--text);
+}
+
+/* 창 제목 리본 (winTitle.png, 슬라이스 6 12 9 = 테두리 6/12/9논리px) */
+.tu-window__title {
+  display: inline-block;
+  position: relative;
+  border-style: solid;
+  border-width: calc(6 * var(--px)) calc(12 * var(--px)) calc(9 * var(--px));
+  /* 토비 screens.css: border-image: url(winTitle.png) 6 12 9 fill repeat */
+  border-image: url("./ui/winTitle.png") 6 12 9 fill repeat;
+  margin: 0 auto calc(8 * var(--px));
+  padding: 0 calc(6 * var(--px));
+  color: var(--gold-text);
+  font-weight: 700;
+  font-size: calc(12 * var(--px));
+  text-align: center;
+}
+
+/* 창 닫기 버튼 (winClose.png 24x24, 배경 그림 통째) */
+.tu-window__close {
+  position: absolute;
+  top: calc(4 * var(--px));
+  right: calc(4 * var(--px));
+  width: calc(24 * var(--px));
+  height: calc(24 * var(--px));
+  /* 토비 styles.css: background: url(winClose.png) center / 24px 24px no-repeat */
+  background: url("./ui/winClose.png") center / 100% 100% no-repeat;
+  border: 0;
+  color: transparent;
+  font-size: 0;
+  cursor: pointer;
+  padding: 0;
+}
+.tu-window__close:hover { filter: brightness(1.08); }
+.tu-window__close:active { transform: translateY(calc(1 * var(--px))); filter: brightness(0.9); }
+
+/* ── 버튼 ─────────────────────────────────────────────────────────────────
+ * 기본 틀은 중립 크림 버튼 그림 button.png(24x24, 대칭 슬라이스 8).
+ * 색 변형(--orange/--blue/--gray)은 토비가 구운 색 버튼 PNG 를 border-image 로 갈아 끼운다.
+ * 각 그림의 슬라이스는 모서리 장식이 끝나는 지점을 실측해 넣었다(아래 주석).
+ */
+.tu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(24 * var(--px));
+  min-width: calc(30 * var(--px));
+  border-style: solid;
+  border-width: calc(8 * var(--px));
+  /* button.png 24x24, 대칭 슬라이스 8 = 테두리 8논리px */
+  border-image: url("./ui/button.png") 8 fill repeat;
+  border-radius: 0;
+  padding: calc(2 * var(--px)) calc(8 * var(--px));
+  font: inherit;
+  font-size: calc(11 * var(--px));
+  font-weight: 700;
+  color: var(--gold-text);
+  cursor: pointer;
+  word-break: keep-all;        /* 한글 낱말이 중간에서 갈리지 않게 */
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+.tu-btn:hover:not([disabled]) { filter: brightness(1.1); }
+/* 눌림(토비 버튼의 translateY + 아래 테두리 줄이기 느낌) */
+.tu-btn:active:not([disabled]) { transform: translateY(calc(1 * var(--px))); filter: brightness(0.92); }
+.tu-btn:focus-visible { outline: calc(2 * var(--px)) solid var(--gold); outline-offset: calc(1 * var(--px)); }
+.tu-btn[disabled] { filter: grayscale(0.6) brightness(0.9); color: var(--dim); cursor: default; }
+
+/* 색 변형 — 색 버튼 그림으로 테두리 갈아끼움(글자색도 함께) */
+.tu-btn--orange {
+  /* btnOrange.png 195x115, 모서리 캡 실측 ~12 → 슬라이스 12 */
+  border-width: calc(12 * var(--px));
+  border-image: url("./ui/btnOrange.png") 12 fill repeat;
+  color: var(--text-inverse);
+  text-shadow: calc(1 * var(--px)) calc(1 * var(--px)) 0 var(--ink);
+}
+.tu-btn--blue {
+  /* btnBlue.png 167x80, 모서리 캡 실측 ~10 → 슬라이스 10 */
+  border-width: calc(10 * var(--px));
+  border-image: url("./ui/btnBlue.png") 10 fill repeat;
+  color: var(--text-inverse);
+  text-shadow: calc(1 * var(--px)) calc(1 * var(--px)) 0 var(--ink);
+}
+.tu-btn--gray {
+  /* btnGray.png 176x80, 모서리 캡 실측 ~6 → 슬라이스 6 */
+  border-width: calc(6 * var(--px));
+  border-image: url("./ui/btnGray.png") 6 fill repeat;
+  color: var(--text);
+}
+
+/* ── HUD 칩 (hudChip.png, 슬라이스 2 14 = 테두리 2/14논리px) ──────────────── */
+.tu-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(2 * var(--px));
+  height: calc(26 * var(--px));
+  padding: 0 calc(4 * var(--px)) 0 calc(2 * var(--px));
+  border-style: solid;
+  border-width: calc(2 * var(--px)) calc(14 * var(--px));
+  border-color: transparent;
+  /* 토비 styles.css: border-image: url(hudChip.png) 2 14 fill repeat */
+  border-image: url("./ui/hudChip.png") 2 14 fill repeat;
+  font-size: calc(11 * var(--px));
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  color: var(--gold-hi);
+}
+
+/* ── 상단 바 (topbar.png, 가로 3-슬라이스 0 41 0 41, stretch) ───────────────
+ * 좌우 캡 41논리px 고정, 가운데는 늘어난다. 세로 슬라이스 0(높이 1:1이라 늘릴 것 없음).
+ */
+.tu-topbar {
+  display: flex;
+  align-items: center;
+  gap: calc(8 * var(--px));
+  height: calc(29 * var(--px));
+  border-style: solid;
+  border-width: 0 calc(41 * var(--px));
+  /* 토비 styles.css: border-image: url(topbar.png) 0 41 0 41 fill stretch */
+  border-image: url("./ui/topbar.png") 0 41 0 41 fill stretch;
+  padding: 0 calc(8 * var(--px));
+  color: var(--text-inverse);
+  overflow: hidden;
+}
+
+/* ── 게이지 (트랙 gaugeTrack.png 슬라이스 2, 채움은 자식 <i>) ───────────────
+ * 토비 styles.css: .tf-gauge { border-width:2px; border-image:url(gaugeTrack.png) 2 fill repeat }
+ * 채움 <i> 는 width 로 비율을 준다. 초록은 본색(--gauge-green), 금/파랑은 그림 채움.
+ */
+.tu-gauge {
+  position: relative;
+  width: calc(132 * var(--px));
+  height: calc(20 * var(--px));
+  border-style: solid;
+  border-width: calc(2 * var(--px));
+  border-image: url("./ui/gaugeTrack.png") 2 fill repeat;
+  border-radius: 0;
+  background: none;
+  overflow: hidden;
+  padding: 0;
+}
+.tu-gauge > i {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  max-width: 100%;
+  min-width: calc(4 * var(--px));
+  /* 기본 채움은 초록 본색(gaugeFillGreen.png 와 같은 색) */
+  background: var(--gauge-green);
+  box-sizing: border-box;
+}
+.tu-gauge--green > i {
+  /* 그림 채움을 쓰고 싶을 때(gaugeFillGreen.png 122x33, 슬라이스 6) */
+  background: none;
+  border-style: solid;
+  border-width: calc(6 * var(--px));
+  border-image: url("./ui/gaugeFillGreen.png") 6 fill repeat;
+}
+.tu-gauge--gold > i {
+  background: none;
+  border-style: solid;
+  border-width: calc(6 * var(--px));
+  /* 토비 styles.css: border-image: url(gaugeFillGold.png) 6 fill repeat */
+  border-image: url("./ui/gaugeFillGold.png") 6 fill repeat;
+}
+.tu-gauge--blue > i {
+  background: none;
+  border-style: solid;
+  border-width: calc(6 * var(--px));
+  /* gaugeFillBlue.png 206x34, 슬라이스 6 */
+  border-image: url("./ui/gaugeFillBlue.png") 6 fill repeat;
+}
+
+/* ── 슬롯 (slotFrame.png, 슬라이스 8 = 테두리 8논리px) ──────────────────────
+ * 토비 styles.css: .tf-slot { border-width:8px; border-image:url(slotFrame.png) 8 fill repeat }
+ * 선택 상태는 slotSelFrame.png 로 테두리 교체(토비도 같은 슬라이스 8).
+ */
+.tu-slot {
+  position: relative;
+  width: calc(48 * var(--px));
+  height: calc(48 * var(--px));
+  border-style: solid;
+  border-width: calc(8 * var(--px));
+  border-image: url("./ui/slotFrame.png") 8 fill repeat;
+  border-radius: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-inverse);
+  cursor: pointer;
+  padding: 0;
+}
+.tu-slot--selected {
+  /* 토비 styles.css: .tf-grid > .tf-slot--sel 는 selFrameGold, 슬롯 테두리는 slotSelFrame */
+  border-image: url("./ui/slotSelFrame.png") 8 fill repeat;
+}
+
+/* ── 패널 (panel2.png, 대칭 슬라이스 13 → 안전하게 반복 가능한 평탄 띠 기준) ──
+ * panel2.png 38x38 은 작은 타일형 9-슬라이스라 어떤 크기에도 늘어난다.
+ */
+.tu-panel {
+  border-style: solid;
+  border-width: calc(13 * var(--px));
+  border-image: url("./ui/panel2.png") 13 fill repeat;
+  border-radius: 0;
+  padding: calc(10 * var(--px));
+  color: var(--text);
+}
+
+/* ── 대화창 (dialogBody.png 9-슬라이스, 슬라이스 9) ─────────────────────────
+ * 토비 dialog.css 는 dialogFrame.png(534x132)를 통 배경으로 쓰는데, 그 그림은 왼쪽에 리본·
+ * 안쪽 틀이 함께 구워진 '합성 레이아웃' 이라 임의 크기로 늘리면 모양이 깨진다. 그래서 이 키트는
+ * 어떤 크기에도 깨끗하게 늘어나는 순수 9-슬라이스 본문 그림 dialogBody.png(144x48)를 쓴다.
+ */
+.tu-dialog {
+  position: relative;
+  border-style: solid;
+  border-width: calc(9 * var(--px));
+  border-image: url("./ui/dialogBody.png") 9 fill repeat;
+  border-radius: 0;
+  padding: calc(8 * var(--px)) calc(12 * var(--px));
+  color: var(--text);
+  min-height: calc(40 * var(--px));
+}
+
+/* ── 탭 (tabOn2/tabOff2.png, 슬라이스 5 5 0 5 = 테두리 5/5/0논리px) ──────────
+ * 토비 craft.css/market.css: border-width:5px 5px 0; 아래 변은 창에 붙으므로 0.
+ */
+.tu-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-width: calc(5 * var(--px)) calc(5 * var(--px)) 0;
+  border-radius: 0;
+  padding: calc(3 * var(--px)) calc(10 * var(--px));
+  font-size: calc(11 * var(--px));
+  font-weight: 700;
+  color: var(--text);
+  cursor: pointer;
+}
+.tu-tab--off {
+  /* 토비: border-image: url(tabOff2.png) 5 5 0 5 fill repeat */
+  border-image: url("./ui/tabOff2.png") 5 5 0 5 fill repeat;
+  color: var(--dim);
+}
+.tu-tab--on {
+  /* 토비: border-image: url(tabOn2.png) 5 5 0 5 fill repeat */
+  border-image: url("./ui/tabOn2.png") 5 5 0 5 fill repeat;
+  color: var(--gold-text);
+}
+
+/* ── 라벨 알약 (labelOval.png, 통 배경 늘리기) ─────────────────────────────── */
+.tu-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: url("./ui/labelOval.png") no-repeat center / 100% 100%;
+  padding: calc(6 * var(--px)) calc(14 * var(--px));
+  font-size: calc(11 * var(--px));
+  font-weight: 700;
+  color: var(--gold-text);
+  white-space: nowrap;
+}

@@ -1,0 +1,77 @@
+{
+  "srcPerPx": 6,
+  "rects": {
+    "festivalStage": {
+      "x": 0,
+      "y": 22,
+      "w": 94,
+      "h": 50,
+      "tilesW": 5.88,
+      "tilesH": 3.13
+    },
+    "trophyHall": {
+      "x": 95,
+      "y": 8,
+      "w": 93,
+      "h": 64,
+      "tilesW": 5.81,
+      "tilesH": 4
+    },
+    "villageHall": {
+      "x": 189,
+      "y": 0,
+      "w": 96,
+      "h": 72,
+      "tilesW": 6,
+      "tilesH": 4.5
+    },
+    "rebirthAltar": {
+      "x": 286,
+      "y": 16,
+      "w": 92,
+      "h": 56,
+      "tilesW": 5.75,
+      "tilesH": 3.5
+    },
+    "marketStalls": {
+      "x": 379,
+      "y": 26,
+      "w": 90,
+      "h": 46,
+      "tilesW": 5.63,
+      "tilesH": 2.88
+    },
+    "foodCart": {
+      "x": 470,
+      "y": 26,
+      "w": 65,
+      "h": 46,
+      "tilesW": 4.06,
+      "tilesH": 2.88
+    },
+    "repBoard": {
+      "x": 536,
+      "y": 24,
+      "w": 85,
+      "h": 48,
+      "tilesW": 5.31,
+      "tilesH": 3
+    },
+    "bellTower": {
+      "x": 622,
+      "y": 0,
+      "w": 64,
+      "h": 72,
+      "tilesW": 4,
+      "tilesH": 4.5
+    },
+    "snowLodge": {
+      "x": 687,
+      "y": 14,
+      "w": 95,
+      "h": 58,
+      "tilesW": 5.94,
+      "tilesH": 3.63
+    }
+  }
+}

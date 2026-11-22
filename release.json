@@ -1,0 +1,11 @@
+{
+  "source": "67d7f34552909812c7d03859506999609b0b2260",
+  "version": "0.132-v9-candidate",
+  "schema": 9,
+  "platform": "public browser web",
+  "at": "2026-11-16T03:24:16.424Z",
+  "files": 375,
+  "bytes": 37012942,
+  "nativeSdk": "NOT_TESTED",
+  "physicalDevices": "NOT_TESTED"
+}

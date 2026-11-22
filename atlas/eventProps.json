@@ -1,0 +1,261 @@
+{
+  "srcPerPx": 4.67,
+  "rects": {
+    "bbqGrill": {
+      "x": 0,
+      "y": 8,
+      "w": 21,
+      "h": 20,
+      "tilesW": 1.31,
+      "tilesH": 1.25
+    },
+    "feastTable": {
+      "x": 22,
+      "y": 12,
+      "w": 34,
+      "h": 16,
+      "tilesW": 2.13,
+      "tilesH": 1
+    },
+    "campPot": {
+      "x": 57,
+      "y": 6,
+      "w": 21,
+      "h": 22,
+      "tilesW": 1.31,
+      "tilesH": 1.38
+    },
+    "picnicMat": {
+      "x": 79,
+      "y": 22,
+      "w": 11,
+      "h": 6,
+      "tilesW": 0.69,
+      "tilesH": 0.38
+    },
+    "watermelonStand": {
+      "x": 91,
+      "y": 16,
+      "w": 10,
+      "h": 12,
+      "tilesW": 0.63,
+      "tilesH": 0.75
+    },
+    "watermelonSmashed": {
+      "x": 102,
+      "y": 22,
+      "w": 12,
+      "h": 6,
+      "tilesW": 0.75,
+      "tilesH": 0.38
+    },
+    "riceCakeBox": {
+      "x": 115,
+      "y": 16,
+      "w": 11,
+      "h": 12,
+      "tilesW": 0.69,
+      "tilesH": 0.75
+    },
+    "honeyJar": {
+      "x": 127,
+      "y": 18,
+      "w": 9,
+      "h": 10,
+      "tilesW": 0.56,
+      "tilesH": 0.63
+    },
+    "podium": {
+      "x": 137,
+      "y": 8,
+      "w": 40,
+      "h": 20,
+      "tilesW": 2.5,
+      "tilesH": 1.25
+    },
+    "trophy": {
+      "x": 178,
+      "y": 14,
+      "w": 12,
+      "h": 14,
+      "tilesW": 0.75,
+      "tilesH": 0.88
+    },
+    "rosette": {
+      "x": 191,
+      "y": 14,
+      "w": 9,
+      "h": 14,
+      "tilesW": 0.56,
+      "tilesH": 0.88
+    },
+    "scoreboard": {
+      "x": 201,
+      "y": 8,
+      "w": 27,
+      "h": 20,
+      "tilesW": 1.69,
+      "tilesH": 1.25
+    },
+    "drum": {
+      "x": 229,
+      "y": 12,
+      "w": 13,
+      "h": 16,
+      "tilesW": 0.81,
+      "tilesH": 1
+    },
+    "trumpet": {
+      "x": 243,
+      "y": 12,
+      "w": 13,
+      "h": 16,
+      "tilesW": 0.81,
+      "tilesH": 1
+    },
+    "archeryTarget": {
+      "x": 257,
+      "y": 8,
+      "w": 16,
+      "h": 20,
+      "tilesW": 1,
+      "tilesH": 1.25
+    },
+    "potDummy": {
+      "x": 274,
+      "y": 4,
+      "w": 18,
+      "h": 24,
+      "tilesW": 1.13,
+      "tilesH": 1.5
+    },
+    "rocket": {
+      "x": 293,
+      "y": 12,
+      "w": 10,
+      "h": 16,
+      "tilesW": 0.63,
+      "tilesH": 1
+    },
+    "burstSmall": {
+      "x": 304,
+      "y": 12,
+      "w": 16,
+      "h": 16,
+      "tilesW": 1,
+      "tilesH": 1
+    },
+    "burstBig": {
+      "x": 321,
+      "y": 0,
+      "w": 27,
+      "h": 28,
+      "tilesW": 1.69,
+      "tilesH": 1.75
+    },
+    "sparkles": {
+      "x": 349,
+      "y": 0,
+      "w": 27,
+      "h": 28,
+      "tilesW": 1.69,
+      "tilesH": 1.75
+    },
+    "festivalTorch": {
+      "x": 377,
+      "y": 0,
+      "w": 10,
+      "h": 28,
+      "tilesW": 0.63,
+      "tilesH": 1.75
+    },
+    "skyLantern": {
+      "x": 388,
+      "y": 14,
+      "w": 11,
+      "h": 14,
+      "tilesW": 0.69,
+      "tilesH": 0.88
+    },
+    "bonfire": {
+      "x": 400,
+      "y": 4,
+      "w": 21,
+      "h": 24,
+      "tilesW": 1.31,
+      "tilesH": 1.5
+    },
+    "lightString": {
+      "x": 422,
+      "y": 18,
+      "w": 23,
+      "h": 10,
+      "tilesW": 1.44,
+      "tilesH": 0.63
+    },
+    "snowballs": {
+      "x": 446,
+      "y": 20,
+      "w": 12,
+      "h": 8,
+      "tilesW": 0.75,
+      "tilesH": 0.5
+    },
+    "icePond": {
+      "x": 459,
+      "y": 22,
+      "w": 20,
+      "h": 6,
+      "tilesW": 1.25,
+      "tilesH": 0.38
+    },
+    "kite": {
+      "x": 480,
+      "y": 8,
+      "w": 15,
+      "h": 20,
+      "tilesW": 0.94,
+      "tilesH": 1.25
+    },
+    "sandPail": {
+      "x": 496,
+      "y": 18,
+      "w": 12,
+      "h": 10,
+      "tilesW": 0.75,
+      "tilesH": 0.63
+    },
+    "leafJump": {
+      "x": 509,
+      "y": 20,
+      "w": 16,
+      "h": 8,
+      "tilesW": 1,
+      "tilesH": 0.5
+    },
+    "harvestBasket": {
+      "x": 526,
+      "y": 16,
+      "w": 16,
+      "h": 12,
+      "tilesW": 1,
+      "tilesH": 0.75
+    },
+    "flowerCrown": {
+      "x": 543,
+      "y": 18,
+      "w": 11,
+      "h": 10,
+      "tilesW": 0.69,
+      "tilesH": 0.63
+    },
+    "luckyCharm": {
+      "x": 555,
+      "y": 8,
+      "w": 13,
+      "h": 20,
+      "tilesW": 0.81,
+      "tilesH": 1.25
+    }
+  }
+}

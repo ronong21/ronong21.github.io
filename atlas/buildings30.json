@@ -1,0 +1,53 @@
+{
+  "srcPerPx": 6,
+  "rects": {
+    "bistro": {
+      "x": 0,
+      "y": 0,
+      "w": 89,
+      "h": 80,
+      "tilesW": 5.56,
+      "tilesH": 5
+    },
+    "inn": {
+      "x": 90,
+      "y": 1,
+      "w": 83,
+      "h": 79,
+      "tilesW": 5.19,
+      "tilesH": 4.94
+    },
+    "weaponShop": {
+      "x": 174,
+      "y": 10,
+      "w": 74,
+      "h": 70,
+      "tilesW": 4.63,
+      "tilesH": 4.38
+    },
+    "armorShop": {
+      "x": 249,
+      "y": 17,
+      "w": 84,
+      "h": 63,
+      "tilesW": 5.25,
+      "tilesH": 3.94
+    },
+    "caveEntrance": {
+      "x": 334,
+      "y": 25,
+      "w": 71,
+      "h": 55,
+      "tilesW": 4.44,
+      "tilesH": 3.44
+    },
+    "shrine": {
+      "x": 406,
+      "y": 13,
+      "w": 72,
+      "h": 67,
+      "tilesW": 4.5,
+      "tilesH": 4.19
+    }
+  }
+}

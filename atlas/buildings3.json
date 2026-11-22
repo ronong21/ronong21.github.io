@@ -1,0 +1,77 @@
+{
+  "srcPerPx": 6,
+  "rects": {
+    "guildHall": {
+      "x": 0,
+      "y": 4,
+      "w": 100,
+      "h": 76,
+      "tilesW": 6.25,
+      "tilesH": 4.75
+    },
+    "chapel": {
+      "x": 101,
+      "y": 10,
+      "w": 68,
+      "h": 70,
+      "tilesW": 4.25,
+      "tilesH": 4.38
+    },
+    "bakery": {
+      "x": 170,
+      "y": 24,
+      "w": 74,
+      "h": 56,
+      "tilesW": 4.63,
+      "tilesH": 3.5
+    },
+    "petHouse": {
+      "x": 245,
+      "y": 36,
+      "w": 80,
+      "h": 44,
+      "tilesW": 5,
+      "tilesH": 2.75
+    },
+    "watchtower": {
+      "x": 326,
+      "y": 0,
+      "w": 69,
+      "h": 80,
+      "tilesW": 4.31,
+      "tilesH": 5
+    },
+    "oreStore": {
+      "x": 396,
+      "y": 26,
+      "w": 92,
+      "h": 54,
+      "tilesW": 5.75,
+      "tilesH": 3.38
+    },
+    "teaHouse": {
+      "x": 489,
+      "y": 26,
+      "w": 89,
+      "h": 54,
+      "tilesW": 5.56,
+      "tilesH": 3.38
+    },
+    "flowerShop": {
+      "x": 579,
+      "y": 30,
+      "w": 79,
+      "h": 50,
+      "tilesW": 4.94,
+      "tilesH": 3.13
+    },
+    "stage": {
+      "x": 659,
+      "y": 34,
+      "w": 101,
+      "h": 46,
+      "tilesW": 6.31,
+      "tilesH": 2.88
+    }
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "srcPerPx": 8,
+  "rects": {
+    "bolt1": {
+      "x": 0,
+      "y": 6,
+      "w": 14,
+      "h": 25,
+      "tilesW": 0.88,
+      "tilesH": 1.56
+    },
+    "bolt2": {
+      "x": 15,
+      "y": 0,
+      "w": 18,
+      "h": 31,
+      "tilesW": 1.13,
+      "tilesH": 1.94
+    },
+    "bolt3": {
+      "x": 34,
+      "y": 10,
+      "w": 16,
+      "h": 21,
+      "tilesW": 1,
+      "tilesH": 1.31
+    },
+    "cloud1": {
+      "x": 51,
+      "y": 10,
+      "w": 18,
+      "h": 21,
+      "tilesW": 1.13,
+      "tilesH": 1.31
+    },
+    "cloud2": {
+      "x": 70,
+      "y": 8,
+      "w": 19,
+      "h": 23,
+      "tilesW": 1.19,
+      "tilesH": 1.44
+    },
+    "healRain1": {
+      "x": 90,
+      "y": 8,
+      "w": 16,
+      "h": 23,
+      "tilesW": 1,
+      "tilesH": 1.44
+    },
+    "healRain2": {
+      "x": 107,
+      "y": 8,
+      "w": 18,
+      "h": 23,
+      "tilesW": 1.13,
+      "tilesH": 1.44
+    },
+    "healBurst": {
+      "x": 126,
+      "y": 10,
+      "w": 19,
+      "h": 21,
+      "tilesW": 1.19,
+      "tilesH": 1.31
+    },
+    "bless1": {
+      "x": 146,
+      "y": 17,
+      "w": 16,
+      "h": 14,
+      "tilesW": 1,
+      "tilesH": 0.88
+    },
+    "bless2": {
+      "x": 163,
+      "y": 12,
+      "w": 22,
+      "h": 19,
+      "tilesW": 1.38,
+      "tilesH": 1.19
+    },
+    "callWind1": {
+      "x": 186,
+      "y": 16,
+      "w": 19,
+      "h": 15,
+      "tilesW": 1.19,
+      "tilesH": 0.94
+    },
+    "callWind2": {
+      "x": 206,
+      "y": 11,
+      "w": 19,
+      "h": 20,
+      "tilesW": 1.19,
+      "tilesH": 1.25
+    },
+    "bounty1": {
+      "x": 226,
+      "y": 13,
+      "w": 16,
+      "h": 18,
+      "tilesW": 1,
+      "tilesH": 1.13
+    },
+    "bounty2": {
+      "x": 243,
+      "y": 11,
+      "w": 22,
+      "h": 20,
+      "tilesW": 1.38,
+      "tilesH": 1.25
+    },
+    "wings1": {
+      "x": 266,
+      "y": 15,
+      "w": 19,
+      "h": 16,
+      "tilesW": 1.19,
+      "tilesH": 1
+    },
+    "wings2": {
+      "x": 286,
+      "y": 11,
+      "w": 21,
+      "h": 20,
+      "tilesW": 1.31,
+      "tilesH": 1.25
+    },
+    "starRise1": {
+      "x": 308,
+      "y": 9,
+      "w": 18,
+      "h": 22,
+      "tilesW": 1.13,
+      "tilesH": 1.38
+    },
+    "starRise2": {
+      "x": 327,
+      "y": 6,
+      "w": 20,
+      "h": 25,
+      "tilesW": 1.25,
+      "tilesH": 1.56
+    },
+    "starRise3": {
+      "x": 348,
+      "y": 8,
+      "w": 21,
+      "h": 23,
+      "tilesW": 1.31,
+      "tilesH": 1.44
+    },
+    "starTiny": {
+      "x": 370,
+      "y": 19,
+      "w": 11,
+      "h": 12,
+      "tilesW": 0.69,
+      "tilesH": 0.75
+    },
+    "confetti1": {
+      "x": 382,
+      "y": 13,
+      "w": 20,
+      "h": 18,
+      "tilesW": 1.25,
+      "tilesH": 1.13
+    },
+    "confetti2": {
+      "x": 403,
+      "y": 12,
+      "w": 20,
+      "h": 19,
+      "tilesW": 1.25,
+      "tilesH": 1.19
+    },
+    "faithUp1": {
+      "x": 424,
+      "y": 13,
+      "w": 17,
+      "h": 18,
+      "tilesW": 1.06,
+      "tilesH": 1.13
+    },
+    "faithUp2": {
+      "x": 442,
+      "y": 9,
+      "w": 19,
+      "h": 22,
+      "tilesW": 1.19,
+      "tilesH": 1.38
+    },
+    "emoNote": {
+      "x": 462,
+      "y": 17,
+      "w": 15,
+      "h": 14,
+      "tilesW": 0.94,
+      "tilesH": 0.88
+    },
+    "emoSweat": {
+      "x": 478,
+      "y": 16,
+      "w": 16,
+      "h": 15,
+      "tilesW": 1,
+      "tilesH": 0.94
+    },
+    "emoAnger": {
+      "x": 495,
+      "y": 14,
+      "w": 18,
+      "h": 17,
+      "tilesW": 1.13,
+      "tilesH": 1.06
+    },
+    "emoStars": {
+      "x": 514,
+      "y": 18,
+      "w": 17,
+      "h": 13,
+      "tilesW": 1.06,
+      "tilesH": 0.81
+    },
+    "emoHeartbreak": {
+      "x": 532,
+      "y": 16,
+      "w": 17,
+      "h": 15,
+      "tilesW": 1.06,
+      "tilesH": 0.94
+    },
+    "emoIdea": {
+      "x": 550,
+      "y": 12,
+      "w": 18,
+      "h": 19,
+      "tilesW": 1.13,
+      "tilesH": 1.19
+    },
+    "emoQuestion": {
+      "x": 569,
+      "y": 15,
+      "w": 17,
+      "h": 16,
+      "tilesW": 1.06,
+      "tilesH": 1
+    },
+    "emoSleepy": {
+      "x": 587,
+      "y": 16,
+      "w": 19,
+      "h": 15,
+      "tilesW": 1.19,
+      "tilesH": 0.94
+    }
+  }
+}

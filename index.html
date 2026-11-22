@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#241C2B" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./pwa/icon-192.png" />
+    <meta name="description" content="토비가 판 굴이 곧 던전이다 — 옆 단면 마을 경영 RPG" />
+    <title>토비 용사단</title>
+    <!-- 파비콘 요청을 막는다(없으면 브라우저가 /favicon.ico 를 찾다 404 를 낸다 — 화면 찍기 오류 1건의 정체) -->
+    <link rel="icon" href="data:," />
+    <script type="module" crossorigin src="./assets/main-0nnV28GE.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/terrainArt-DsIn-QBV.js">
+    <link rel="stylesheet" crossorigin href="./assets/main-ZBKlJ1_W.css">
+  <meta name="screen-orientation" content="landscape"><meta name="x5-orientation" content="landscape"></head>
+  <body>
+    <div id="root"></div>
+  <script>
+(function(){
+  if(window.__ygLandscapeLock)return;window.__ygLandscapeLock=true;
+  var mobile=matchMedia('(pointer:coarse)').matches||/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if(!mobile||!screen.orientation||!screen.orientation.lock||!document.documentElement.requestFullscreen)return;
+  window.addEventListener('pointerdown',function(){
+    var p=document.fullscreenElement?Promise.resolve():document.documentElement.requestFullscreen({navigationUI:'hide'});
+    p.then(function(){return screen.orientation.lock('landscape')}).catch(function(){});
+  },{once:true,capture:true});
+})();
+</script>
+</body>
+</html>

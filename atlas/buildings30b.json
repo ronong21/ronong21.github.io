@@ -1,0 +1,77 @@
+{
+  "srcPerPx": 6,
+  "rects": {
+    "toolShop": {
+      "x": 0,
+      "y": 10,
+      "w": 103,
+      "h": 60,
+      "tilesW": 6.44,
+      "tilesH": 3.75
+    },
+    "forge": {
+      "x": 104,
+      "y": 0,
+      "w": 90,
+      "h": 70,
+      "tilesW": 5.63,
+      "tilesH": 4.38
+    },
+    "houseA": {
+      "x": 195,
+      "y": 18,
+      "w": 71,
+      "h": 52,
+      "tilesW": 4.44,
+      "tilesH": 3.25
+    },
+    "houseB": {
+      "x": 267,
+      "y": 18,
+      "w": 75,
+      "h": 52,
+      "tilesW": 4.69,
+      "tilesH": 3.25
+    },
+    "hotSpring": {
+      "x": 343,
+      "y": 20,
+      "w": 105,
+      "h": 50,
+      "tilesW": 6.56,
+      "tilesH": 3.13
+    },
+    "barn": {
+      "x": 449,
+      "y": 8,
+      "w": 87,
+      "h": 62,
+      "tilesW": 5.44,
+      "tilesH": 3.88
+    },
+    "field": {
+      "x": 537,
+      "y": 48,
+      "w": 79,
+      "h": 22,
+      "tilesW": 4.94,
+      "tilesH": 1.38
+    },
+    "trainingGround": {
+      "x": 617,
+      "y": 30,
+      "w": 112,
+      "h": 40,
+      "tilesW": 7,
+      "tilesH": 2.5
+    },
+    "requestBoard": {
+      "x": 730,
+      "y": 20,
+      "w": 91,
+      "h": 50,
+      "tilesW": 5.69,
+      "tilesH": 3.13
+    }
+  }
+}

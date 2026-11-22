@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>토비 UI 키트 미리보기</title>
+<link rel="stylesheet" href="./ui-kit.css">
+<style>
+  /* 미리보기 페이지에서는 한 논리 픽셀을 3 CSS px 로 키워 부품을 크게 본다 */
+  :root { --px: 3px; }
+  body {
+    margin: 0;
+    padding: calc(16 * var(--px));
+    background: #2a2030;          /* 어두운 배경 위에서 크림 창이 돋보이게 */
+    font-family: "Galmuri11", system-ui;
+    -webkit-font-smoothing: none;
+    color: var(--text-inverse);
+  }
+  h1 { font-size: calc(14 * var(--px)); margin: 0 0 calc(12 * var(--px)); color: var(--gold-hi); }
+  .row { display: flex; flex-wrap: wrap; gap: calc(10 * var(--px)); align-items: center; margin-bottom: calc(14 * var(--px)); }
+  .cap { width: 100%; font-size: calc(9 * var(--px)); color: #b9a9c4; margin-bottom: calc(2 * var(--px)); }
+</style>
+</head>
+<body>
+  <h1>토비 UI 키트 — 부품 미리보기</h1>
+
+  <!-- 창 + 제목 리본 + 닫기 -->
+  <div class="row">
+    <div class="cap">창(tu-window) · 제목 리본 · 닫기</div>
+    <div class="tu-window" style="width: calc(220 * var(--px));">
+      <button class="tu-window__close" aria-label="닫기"></button>
+      <div class="tu-window__title">건물 짓기</div>
+      <p style="color: var(--text); font-size: calc(11 * var(--px)); margin: 0;">
+        나무와 돌을 모아 건물을 올려 보자.
+      </p>
+    </div>
+  </div>
+
+  <!-- 버튼 3색 + 비활성 -->
+  <div class="row">
+    <div class="cap">버튼(tu-btn) · 주황/파랑/회색</div>
+    <button class="tu-btn tu-btn--orange">토비: 공격</button>
+    <button class="tu-btn tu-btn--blue">짓기</button>
+    <button class="tu-btn tu-btn--gray">취소</button>
+    <button class="tu-btn tu-btn--gray" disabled>잠김</button>
+  </div>
+
+  <!-- HUD 칩 -->
+  <div class="row">
+    <div class="cap">HUD 칩(tu-chip)</div>
+    <span class="tu-chip">봄 1일</span>
+    <span class="tu-chip">금화 120</span>
+  </div>
+
+  <!-- 상단 바 -->
+  <div class="row">
+    <div class="cap">상단 바(tu-topbar)</div>
+    <div class="tu-topbar" style="width: calc(260 * var(--px));">
+      <span class="tu-chip">봄 1일</span>
+      <span class="tu-chip">금화 120</span>
+    </div>
+  </div>
+
+  <!-- 게이지 60% -->
+  <div class="row">
+    <div class="cap">게이지(tu-gauge) · 초록/금/파랑 · 60%</div>
+    <div class="tu-gauge"><i style="width: 60%;"></i></div>
+    <div class="tu-gauge tu-gauge--gold"><i style="width: 60%;"></i></div>
+    <div class="tu-gauge tu-gauge--blue"><i style="width: 60%;"></i></div>
+  </div>
+
+  <!-- 슬롯 3개(하나 선택) -->
+  <div class="row">
+    <div class="cap">슬롯(tu-slot) · 가운데 선택</div>
+    <div class="tu-slot"></div>
+    <div class="tu-slot tu-slot--selected"></div>
+    <div class="tu-slot"></div>
+  </div>
+
+  <!-- 탭 -->
+  <div class="row">
+    <div class="cap">탭(tu-tab)</div>
+    <span class="tu-tab tu-tab--on">장비</span>
+    <span class="tu-tab tu-tab--off">재료</span>
+    <span class="tu-tab tu-tab--off">요리</span>
+  </div>
+
+  <!-- 패널 + 대화창 + 라벨 -->
+  <div class="row">
+    <div class="cap">패널(tu-panel) · 대화창(tu-dialog) · 라벨(tu-label)</div>
+    <div class="tu-panel" style="width: calc(150 * var(--px));">
+      <span style="color: var(--text); font-size: calc(11 * var(--px));">보관함</span>
+    </div>
+    <div class="tu-dialog" style="width: calc(200 * var(--px));">
+      <span style="font-size: calc(11 * var(--px));">용사단에 온 걸 환영해!</span>
+    </div>
+    <span class="tu-label">신규</span>
+  </div>
+</body>
+</html>

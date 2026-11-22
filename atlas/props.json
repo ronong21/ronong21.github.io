@@ -1,0 +1,261 @@
+{
+  "srcPerPx": 10,
+  "rects": {
+    "ladder": {
+      "x": 0,
+      "y": 2,
+      "w": 13,
+      "h": 22,
+      "tilesW": 0.81,
+      "tilesH": 1.38
+    },
+    "wallTorch": {
+      "x": 14,
+      "y": 2,
+      "w": 11,
+      "h": 22,
+      "tilesW": 0.69,
+      "tilesH": 1.38
+    },
+    "post": {
+      "x": 26,
+      "y": 0,
+      "w": 9,
+      "h": 24,
+      "tilesW": 0.56,
+      "tilesH": 1.5
+    },
+    "paperLantern": {
+      "x": 36,
+      "y": 3,
+      "w": 12,
+      "h": 21,
+      "tilesW": 0.75,
+      "tilesH": 1.31
+    },
+    "sack": {
+      "x": 49,
+      "y": 7,
+      "w": 15,
+      "h": 17,
+      "tilesW": 0.94,
+      "tilesH": 1.06
+    },
+    "coinPile": {
+      "x": 65,
+      "y": 11,
+      "w": 15,
+      "h": 13,
+      "tilesW": 0.94,
+      "tilesH": 0.81
+    },
+    "coin": {
+      "x": 81,
+      "y": 15,
+      "w": 9,
+      "h": 9,
+      "tilesW": 0.56,
+      "tilesH": 0.56
+    },
+    "arrowSign": {
+      "x": 91,
+      "y": 6,
+      "w": 16,
+      "h": 18,
+      "tilesW": 1,
+      "tilesH": 1.13
+    },
+    "soup": {
+      "x": 108,
+      "y": 5,
+      "w": 18,
+      "h": 19,
+      "tilesW": 1.13,
+      "tilesH": 1.19
+    },
+    "carrot": {
+      "x": 127,
+      "y": 8,
+      "w": 14,
+      "h": 16,
+      "tilesW": 0.88,
+      "tilesH": 1
+    },
+    "mushroom": {
+      "x": 142,
+      "y": 10,
+      "w": 13,
+      "h": 14,
+      "tilesW": 0.81,
+      "tilesH": 0.88
+    },
+    "bread": {
+      "x": 156,
+      "y": 11,
+      "w": 17,
+      "h": 13,
+      "tilesW": 1.06,
+      "tilesH": 0.81
+    },
+    "pot": {
+      "x": 174,
+      "y": 3,
+      "w": 18,
+      "h": 21,
+      "tilesW": 1.13,
+      "tilesH": 1.31
+    },
+    "bowl": {
+      "x": 193,
+      "y": 12,
+      "w": 15,
+      "h": 12,
+      "tilesW": 0.94,
+      "tilesH": 0.75
+    },
+    "tea": {
+      "x": 209,
+      "y": 6,
+      "w": 15,
+      "h": 18,
+      "tilesW": 0.94,
+      "tilesH": 1.13
+    },
+    "pie": {
+      "x": 225,
+      "y": 10,
+      "w": 16,
+      "h": 14,
+      "tilesW": 1,
+      "tilesH": 0.88
+    },
+    "woodSword": {
+      "x": 242,
+      "y": 7,
+      "w": 11,
+      "h": 17,
+      "tilesW": 0.69,
+      "tilesH": 1.06
+    },
+    "ironSword": {
+      "x": 254,
+      "y": 4,
+      "w": 12,
+      "h": 20,
+      "tilesW": 0.75,
+      "tilesH": 1.25
+    },
+    "shortBow": {
+      "x": 267,
+      "y": 6,
+      "w": 13,
+      "h": 18,
+      "tilesW": 0.81,
+      "tilesH": 1.13
+    },
+    "longBow": {
+      "x": 281,
+      "y": 5,
+      "w": 16,
+      "h": 19,
+      "tilesW": 1,
+      "tilesH": 1.19
+    },
+    "staff": {
+      "x": 298,
+      "y": 3,
+      "w": 11,
+      "h": 21,
+      "tilesW": 0.69,
+      "tilesH": 1.31
+    },
+    "amberStaff": {
+      "x": 310,
+      "y": 2,
+      "w": 11,
+      "h": 22,
+      "tilesW": 0.69,
+      "tilesH": 1.38
+    },
+    "shield": {
+      "x": 322,
+      "y": 9,
+      "w": 14,
+      "h": 15,
+      "tilesW": 0.88,
+      "tilesH": 0.94
+    },
+    "leatherCap": {
+      "x": 337,
+      "y": 11,
+      "w": 18,
+      "h": 13,
+      "tilesW": 1.13,
+      "tilesH": 0.81
+    },
+    "iconHeart": {
+      "x": 356,
+      "y": 12,
+      "w": 13,
+      "h": 12,
+      "tilesW": 0.81,
+      "tilesH": 0.75
+    },
+    "iconStar": {
+      "x": 370,
+      "y": 12,
+      "w": 13,
+      "h": 12,
+      "tilesW": 0.81,
+      "tilesH": 0.75
+    },
+    "iconSparkle": {
+      "x": 384,
+      "y": 13,
+      "w": 14,
+      "h": 11,
+      "tilesW": 0.88,
+      "tilesH": 0.69
+    },
+    "iconHand": {
+      "x": 399,
+      "y": 13,
+      "w": 15,
+      "h": 11,
+      "tilesW": 0.94,
+      "tilesH": 0.69
+    },
+    "iconThought": {
+      "x": 415,
+      "y": 10,
+      "w": 15,
+      "h": 14,
+      "tilesW": 0.94,
+      "tilesH": 0.88
+    },
+    "iconSwords": {
+      "x": 431,
+      "y": 11,
+      "w": 14,
+      "h": 13,
+      "tilesW": 0.88,
+      "tilesH": 0.81
+    },
+    "iconMoon": {
+      "x": 446,
+      "y": 10,
+      "w": 13,
+      "h": 14,
+      "tilesW": 0.81,
+      "tilesH": 0.88
+    },
+    "iconSun": {
+      "x": 460,
+      "y": 8,
+      "w": 16,
+      "h": 16,
+      "tilesW": 1,
+      "tilesH": 1
+    }
+  }
+}

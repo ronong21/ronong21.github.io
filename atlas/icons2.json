@@ -1,0 +1,261 @@
+{
+  "srcPerPx": 11,
+  "rects": {
+    "clsWarrior": {
+      "x": 0,
+      "y": 3,
+      "w": 15,
+      "h": 15,
+      "tilesW": 0.94,
+      "tilesH": 0.94
+    },
+    "clsArcher": {
+      "x": 16,
+      "y": 3,
+      "w": 15,
+      "h": 15,
+      "tilesW": 0.94,
+      "tilesH": 0.94
+    },
+    "clsMage": {
+      "x": 32,
+      "y": 3,
+      "w": 15,
+      "h": 15,
+      "tilesW": 0.94,
+      "tilesH": 0.94
+    },
+    "clsHealer": {
+      "x": 48,
+      "y": 3,
+      "w": 15,
+      "h": 15,
+      "tilesW": 0.94,
+      "tilesH": 0.94
+    },
+    "clsMiner": {
+      "x": 64,
+      "y": 3,
+      "w": 15,
+      "h": 15,
+      "tilesW": 0.94,
+      "tilesH": 0.94
+    },
+    "clsKnight": {
+      "x": 80,
+      "y": 1,
+      "w": 15,
+      "h": 17,
+      "tilesW": 0.94,
+      "tilesH": 1.06
+    },
+    "clsRanger": {
+      "x": 96,
+      "y": 0,
+      "w": 15,
+      "h": 18,
+      "tilesW": 0.94,
+      "tilesH": 1.13
+    },
+    "clsSage": {
+      "x": 112,
+      "y": 3,
+      "w": 15,
+      "h": 15,
+      "tilesW": 0.94,
+      "tilesH": 0.94
+    },
+    "clsPriest": {
+      "x": 128,
+      "y": 3,
+      "w": 15,
+      "h": 15,
+      "tilesW": 0.94,
+      "tilesH": 0.94
+    },
+    "clsExcavator": {
+      "x": 144,
+      "y": 3,
+      "w": 16,
+      "h": 15,
+      "tilesW": 1,
+      "tilesH": 0.94
+    },
+    "classChange": {
+      "x": 161,
+      "y": 3,
+      "w": 15,
+      "h": 15,
+      "tilesW": 0.94,
+      "tilesH": 0.94
+    },
+    "guildCrest": {
+      "x": 177,
+      "y": 3,
+      "w": 15,
+      "h": 15,
+      "tilesW": 0.94,
+      "tilesH": 0.94
+    },
+    "heal": {
+      "x": 193,
+      "y": 4,
+      "w": 14,
+      "h": 14,
+      "tilesW": 0.88,
+      "tilesH": 0.88
+    },
+    "oreSack": {
+      "x": 208,
+      "y": 3,
+      "w": 15,
+      "h": 15,
+      "tilesW": 0.94,
+      "tilesH": 0.94
+    },
+    "tired": {
+      "x": 224,
+      "y": 6,
+      "w": 9,
+      "h": 12,
+      "tilesW": 0.56,
+      "tilesH": 0.75
+    },
+    "hungry": {
+      "x": 234,
+      "y": 7,
+      "w": 14,
+      "h": 11,
+      "tilesW": 0.88,
+      "tilesH": 0.69
+    },
+    "btnBuild": {
+      "x": 249,
+      "y": 3,
+      "w": 15,
+      "h": 15,
+      "tilesW": 0.94,
+      "tilesH": 0.94
+    },
+    "btnMove": {
+      "x": 265,
+      "y": 3,
+      "w": 15,
+      "h": 15,
+      "tilesW": 0.94,
+      "tilesH": 0.94
+    },
+    "btnRemove": {
+      "x": 281,
+      "y": 3,
+      "w": 13,
+      "h": 15,
+      "tilesW": 0.81,
+      "tilesH": 0.94
+    },
+    "btnZoomIn": {
+      "x": 295,
+      "y": 5,
+      "w": 14,
+      "h": 13,
+      "tilesW": 0.88,
+      "tilesH": 0.81
+    },
+    "btnZoomOut": {
+      "x": 310,
+      "y": 5,
+      "w": 14,
+      "h": 13,
+      "tilesW": 0.88,
+      "tilesH": 0.81
+    },
+    "btnSettings": {
+      "x": 325,
+      "y": 4,
+      "w": 15,
+      "h": 14,
+      "tilesW": 0.94,
+      "tilesH": 0.88
+    },
+    "btnClose": {
+      "x": 341,
+      "y": 5,
+      "w": 13,
+      "h": 13,
+      "tilesW": 0.81,
+      "tilesH": 0.81
+    },
+    "btnOk": {
+      "x": 355,
+      "y": 6,
+      "w": 14,
+      "h": 12,
+      "tilesW": 0.88,
+      "tilesH": 0.75
+    },
+    "speed1": {
+      "x": 370,
+      "y": 7,
+      "w": 9,
+      "h": 11,
+      "tilesW": 0.56,
+      "tilesH": 0.69
+    },
+    "speed2": {
+      "x": 380,
+      "y": 7,
+      "w": 14,
+      "h": 11,
+      "tilesW": 0.88,
+      "tilesH": 0.69
+    },
+    "pause": {
+      "x": 395,
+      "y": 7,
+      "w": 10,
+      "h": 11,
+      "tilesW": 0.63,
+      "tilesH": 0.69
+    },
+    "calendar": {
+      "x": 406,
+      "y": 4,
+      "w": 13,
+      "h": 14,
+      "tilesW": 0.81,
+      "tilesH": 0.88
+    },
+    "money": {
+      "x": 420,
+      "y": 5,
+      "w": 16,
+      "h": 13,
+      "tilesW": 1,
+      "tilesH": 0.81
+    },
+    "popularity": {
+      "x": 437,
+      "y": 5,
+      "w": 14,
+      "h": 13,
+      "tilesW": 0.88,
+      "tilesH": 0.81
+    },
+    "storage": {
+      "x": 452,
+      "y": 5,
+      "w": 14,
+      "h": 13,
+      "tilesW": 0.88,
+      "tilesH": 0.81
+    },
+    "adventurers": {
+      "x": 467,
+      "y": 6,
+      "w": 17,
+      "h": 12,
+      "tilesW": 1.06,
+      "tilesH": 0.75
+    }
+  }
+}
